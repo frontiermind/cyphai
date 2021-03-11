@@ -1,0 +1,19 @@
+.members{
+    .two-columns{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include min-screen($break_point_min) {
+            flex-direction: row;
+          }
+        .column{
+            @include min-screen($break_point_min) {
+                width: 45%;
+              }
+            li{
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        }
+    }
+}

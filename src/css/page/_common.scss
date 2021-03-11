@@ -1,0 +1,180 @@
+/*=========================
+common lower pages settings
+==========================*/
+
+/*=========================
+common lower pages page-header
+==========================*/
+
+.page-header {
+  height: 116px;
+  background-size: cover;
+  background-position: center;
+  @include min-screen($break_point_min) {
+    height: 180px;
+  }
+
+  .l-container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    transform: translate(-50%,-50%);
+    color: $white;
+    font-size: 20px;
+    text-align: center;
+    @include min-screen($break_point_min) {
+      margin-top: -15px;
+      font-size: 38px;
+    }
+  }
+}
+
+/*=========================
+common lower pages breadcrumb
+==========================*/
+.breadcrumb {
+  display: none;
+  @include min-screen($break_point_min) {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .breadcrumb-list {
+    font-size: 0;
+    > li {
+      display: inline-block;
+      @include min-screen($break_point_min) {
+        font-size: 12px;
+      }
+      a {
+        text-decoration: none;
+        &::after {
+          content: ">";
+          display: inline-block;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+/*=========================
+page contents
+==========================*/
+.page-block {
+  margin-bottom: 10px;
+  @include min-screen($break_point_min) {
+    margin-bottom: 20px;
+  }
+}
+
+.page-title {
+  @include min-screen($break_point_min) {
+
+  }
+}
+
+.page-subblock {
+  margin-bottom: 20px;
+  &__inner {
+    padding: 0 10px;
+    @include min-screen($break_point_min) {
+      padding: 0 20px;
+    }
+  }
+}
+
+.page-subtitle {
+  border-top: 1px solid $lightgray;
+  border-bottom: 1px solid $lightgray;
+  margin-bottom: 10px;
+  padding: 10px 7px;
+  color: #7186b9;
+  font-size: 18px;
+  font-family: $serif;
+  @include min-screen($break_point_min) {
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    font-size: 23px;
+  }
+}
+
+.page-inner {
+  background-color: $white;
+  padding: 10px 5px;
+  @include min-screen($break_point_min) {
+    padding: 25px 10px;
+  }
+}
+
+/*=========================
+ column-layout
+==========================*/
+.column-layout {
+  @include min-screen($break_point_min) {
+    @include flexbox;
+  }
+  &__pic {
+    margin-bottom: 10px;
+    @include min-screen($break_point_min) {
+      width: calc(50% - 10px);
+      margin-bottom: 0;
+    }
+  }
+  &__txt {
+    @include min-screen($break_point_min) {
+      width: calc(50% - 10px);
+    }
+  }
+
+  &--first {
+    .column-layout__txt {
+      font-weight: bold;
+      font-size: 14px;
+      @include min-screen($break_point_min) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &--pic-right {
+    @include min-screen($break_point_min) {
+      flex-direction : row-reverse
+    }
+    .column-layout__txt {
+
+    }
+  }
+}
+
+/*=========================
+ common lower pages page-footer
+==========================*/
+
+.footer-sns_btns{
+  .sns-btns{
+    @include min-screen($break_point_min) {
+      width: 30%;
+      margin: auto;
+    }
+    // width: 30%;
+    // margin: auto;
+    ul{
+      display: flex;
+      justify-content: center;
+      li{
+        margin: 10px;
+        img{
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
