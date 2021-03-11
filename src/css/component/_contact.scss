@@ -1,0 +1,130 @@
+.common-contact {
+  padding: 30px 0;
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  @include min-screen($break_point_min) {
+    padding: 30px 0 35px;
+  }
+  .common-contact_title {
+    line-height: 1.4;
+    font-size: 21px;
+    @include min-screen($break_point_min) {
+      font-size: 32px;
+    }
+  }
+  .common-contact_tel {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.4;
+    @include min-screen($break_point_min) {
+      margin-top: 15px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    img {
+      width: 25px;
+      display: inline-block;
+      margin: -5px 5px 0 0;
+      @include min-screen($break_point_min) {
+        width: 32px;
+        margin: -11px 10px 0 0;
+      }
+    }
+    span {
+      display: block;
+      font-size: 13px;
+      @include min-screen($break_point_min) {
+        font-size: 16px;
+      }
+    }
+  }
+  .common-contact_btn--box {
+    margin-top: 7px;
+    @include min-screen($break_point_min) {
+      margin-top: 10px;
+    }
+    .common-contact_btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: $white;
+      border: 2px solid $white;
+      color: $blue;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 5px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/footer/icon_mail@2x.png);
+        width: 23px;
+        height: 18px;
+        background-size: 23px;
+        background-position: 0px -18px;
+        background-repeat: no-repeat;
+        margin: 0 5px -4px 0;
+        @include min-screen($break_point_min) {
+          width: 30px;
+          height: 25px;
+          background-size: 30px;
+          background-position: 0 -23px;
+          margin: 0 5px -7px 0;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        background-color: $blue;
+        border: 2px solid $white;
+        color: $white;
+        &:before {
+          background-position: 0 0;
+          @include min-screen($break_point_min) {
+            background-position: 0 1px;
+          }
+        }
+      }
+      @include min-screen($break_point_min) {
+        padding: 12px 20px;
+        font-size: 18px;
+      }
+      img {
+        width: 23px;
+        display: inline-block;
+        margin: -3px 5px 0 0;
+        @include min-screen($break_point_min) {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+
+.tel-link {
+  color: $blue;
+  &:hover {
+    color: $blue;
+  }
+  &:visited {
+    color: $blue;
+  }
+
+  &--white {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+    &:visited {
+      color: $white;
+    }
+    @include min-screen($break_point_min) {
+      pointer-events: none;
+    }
+  }
+  @include min-screen($break_point_min) {
+    pointer-events: none;
+  }
+}

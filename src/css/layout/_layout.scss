@@ -1,0 +1,55 @@
+.l-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+
+  @include min-screen($break_point_min) {
+    min-width: $content_width;
+  }
+}
+
+.l-main {
+  //margin-top: 76px;
+}
+
+
+.company {
+  .l-main {
+    @include min-screen($break_point_min) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+
+.l-container {
+  margin: 0 auto;
+  padding: 0 $content_padding_sp;
+  position: relative;
+  @include clearfix;
+  @include min-screen($break_point_min) {
+    padding: 0 $content_padding;
+    width: $content_width;
+  }
+}
+
+.l-tow__columns{
+  @include min-screen($break_point_min) {
+    display: flex;
+  }
+}
+
+.l-contents__wrapper{
+  margin: 40px 0;
+}
+
+
+.sec-child  {
+  padding: 35px 0 45px;
+  position: relative;
+  &:nth-child(odd) {
+    background-color: $white;
+  }
+  @include min-screen($break_point_min) {
+    padding: 50px 0 60px;
+  }
+}

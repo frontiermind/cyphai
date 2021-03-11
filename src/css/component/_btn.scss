@@ -1,0 +1,95 @@
+.c-btn {
+  &__center {
+    text-align: center;
+  }
+}
+
+.btn {
+  width: 100px;
+  padding: 10px 0;
+  border: 1px solid $green;
+  color: $black;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 1;
+  @include min-screen($break_point_min) {
+    // width: 300px;
+    // padding: 25px;
+    // font-size: 16px;
+  }
+  &:visited {
+    color: $black;
+  }
+  &:hover {
+    background: $green;
+    border: 1px solid $green;
+    color: $white;
+  }
+
+  // &:after {
+  //   display: block;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   font-family: fontawesome;
+  //   content: "\f105";
+  //   position: absolute;
+  //   right: 10px;
+  //   font-size: 12px;
+  //   @include min-screen($break_point_min) {
+  //     font-size: 16px;
+  //   }
+  // }
+
+  //size
+
+  &.btn-wide {
+    width: 220px;
+    @include min-screen($break_point_min) {
+      width: 250px;
+      padding: 18px;
+    }
+  }
+
+
+  //modifier
+  &.btn-default {
+    background-color: $green;
+    color: $white;
+  }
+
+  &.btn-blue {
+    background-color: transparent;
+    border: 1px solid $blue;
+    color: $black;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  &.btn-f__small {
+    font-size: 14px;
+    @include min-screen($break_point_min) {
+      font-size: 16px;
+    }
+  }
+}
+
+.page-anchor:after {
+  content: "\f078";
+  @include min-screen($break_point_min) {
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+/* animate */
+
+@keyframes circleanime {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}

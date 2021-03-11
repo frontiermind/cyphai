@@ -1,0 +1,101 @@
+input[type=text] {
+	border-radius: 0;
+    -webkit-appearance: none;}
+
+button,
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-radius: 3px;
+	&:hover {
+		//border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+    outline: none;
+	}
+}
+
+.address-button {
+  border: 1px solid $gray;
+	padding: 2px 5px;
+	background-color: #f6f7f7;
+	color: $black;
+	border-radius: 5px;
+}
+
+.form-submit {
+	position: relative;
+	width: 100%;
+	line-height: 34px;
+	padding: 15px;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	@include min-screen($break_point_min) {
+		width: 200px;
+		margin-left: 296px;
+		border-radius: 0 4px 4px 0;
+		font-size: 16px;
+	}
+	&:hover {
+		@include min-screen($break_point_min) {
+			opacity: 0.6;
+		}
+	}
+}
+
+
+.submit-btn--list {
+  button {
+		margin: 0 10px;
+	}
+}
+
+
+
+.submit-btn--list {
+  margin-top: 30px;
+	.submit-btn {
+		border: 1px solid $blue;
+		background: $blue;
+		color: $white;
+		&:hover {
+      background: $white;
+			color: $blue;
+		}
+		@include min-screen($break_point_min) {
+			
+		}
+	}
+
+	.reset-btn {
+		border: 1px solid $black;
+		background: $white;
+		color: $black;
+		&:hover {
+			border: 1px solid $black;
+			background: $black;
+			color: $white;
+		}
+	}
+
+	.submit-btn,
+	.reset-btn {
+		width: 110px;
+		display: inline-block;
+	  padding: 10px 0;
+	  font-weight: bold;
+	  font-size: 13px;
+		text-align: center;
+		border-radius: 5px;
+		@include min-screen($break_point_min) {
+			width: 140px;
+			font-size: 16px;
+			padding: 10px 0;
+		}
+	}
+}

@@ -1,0 +1,393 @@
+.page-header {
+  position: relative;
+  background: $yellow;
+  // background-repeat: no-repeat;
+  // background-position: bottom center;
+  // background-size: cover;
+  height: 90px;
+  @include min-screen($break_point_min) {
+    height: 160px;
+    // margin-bottom: 30px;
+  }
+  .page-title {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+    line-height: 1;
+    @include min-screen($break_point_min) {
+      font-size: 32px;
+    }
+    span {
+      display: block;
+      font-size: 15px;
+      padding-top: 8px;
+      position: relative;
+      @include min-screen($break_point_min) {
+        padding-top: 6px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+/* ====================
+青文字タイトル
+=======================*/
+
+.title-blue {
+  position: relative;
+  margin-bottom: 25px;
+  color: $blue;
+  font-size: 17.5px;
+  text-align: center;
+  @include min-screen($break_point_min) {
+    font-size: 32px;
+    line-height: 1.7;
+  }
+  &:after {
+    width: 75px;
+    height: 4px;
+    content: "";
+    display: block;
+    background-color: $blue;
+    margin: 10px auto 0;
+    @include min-screen($break_point_min) {
+      width: 100px;
+      height: 5px;
+      margin-top: 25px;
+    }
+  }
+}
+// .business {
+//   .page-header {
+//     background-image: url(../images/business/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/business/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/business/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/business/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+
+// .contact {
+//   .page-header {
+//     background-image: url(../images/contact/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/contact/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/contact/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/contact/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+
+// .company {
+//   .page-header {
+//     background-image: url(../images/company/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/company/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/company/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/company/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+
+// .privacy {
+//   .page-header {
+//     background-image: url(../images/privacy/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/privacy/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/privacy/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/privacy/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+// .news {
+//   .page-header {
+//     background-image: url(../images/news/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/news/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/news/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/news/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+// .results {
+//   .page-header {
+//     background-image: url(../images/results/bg_sp.jpg);
+//     @include retina {
+//       background-image: url(../images/results/bg_sp@2x.jpg);
+//     }
+
+//     @include min-screen($break_point_min) {
+//       background-image: url(../images/results/bg_pc.jpg);
+//       @include retina {
+//         background-image: url(../images/results/bg_pc@2x.jpg);
+//       }
+//     }
+
+//   }
+// }
+
+/* ====================
+各ページMV用
+=======================*/
+
+  .common-title__center.l-page__title{
+    color: $blue2;
+    background-size: cover;
+    padding: 40px 0 40px;
+    @include min-screen($break_point_min) {
+      padding: 120px 0 140px;
+    }
+    &:after {
+      width: 40px;
+      height: 18px;
+      content: "";
+      display: block;
+      background-image: url(../images/common/icon_title@2x.png);
+      background-size: 40px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -20px;
+      @include min-screen($break_point_min) {
+        width: 50px;
+        height: 22px;
+        bottom: 100px;
+        background-size: 50px;
+        margin-left: -25px;
+      }
+    }
+    .common-title__en{
+      font-size: 26px;
+      @include min-screen($break_point_min){
+        font-size: 32px;
+      }
+    }
+  }
+  
+  .about .common-title__center {
+      background-image: url(../images/common/sp_mv_about@2x.png);
+      @include min-screen($break_point_min) {
+        background-image: url(../images/common/mv_about@2x.png);
+      }
+  }
+  
+  .members .common-title__center {
+      background-image: url(../images/common/sp_mv_members@2x.png);
+      @include min-screen($break_point_min) {
+        background-image: url(../images/common/mv_members@2x.png);
+      }
+  }
+  
+  .open .common-title__center {
+      background-image: url(../images/common/sp_mv_open@2x.png);
+      @include min-screen($break_point_min) {
+        background-image: url(../images/common/mv_open@2x.png);
+      }
+  }
+  
+  .meetings .common-title__center {
+    background-image: url(../images/common/sp_mv_meetings@2x.png);
+    @include min-screen($break_point_min) {
+      background-image: url(../images/common/mv_meetings@2x.png);
+    }
+  }
+
+  .news, .news-single{
+
+    .common-title__center {
+      padding: 30px 0;
+      @include min-screen($break_point_min) {
+        padding: 30px 0;
+        &:after{
+          background-image: none;
+        }
+      }
+    }
+  } 
+    
+
+
+
+/* ====================
+トップページ、共通コンタクトエリア用
+=======================*/
+
+.index {
+  .common-title__center {
+    padding: 15px 0 45px;
+    @include min-screen($break_point_min) {
+      background-size: cover;
+    }
+    &:after {
+      width: 40px;
+      height: 18px;
+      content: "";
+      display: block;
+      background-image: url(../images/common/icon_title@2x.png);
+      background-size: 40px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      margin-left: -20px;
+      @include min-screen($break_point_min) {
+        width: 50px;
+        height: 22px;
+        bottom: 20px;
+        background-size: 50px;
+        margin-left: -25px;
+      }
+    }
+  }
+}
+
+
+.common-title__center {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 25px 0 30px;
+  box-shadow: 0px 4px 5px -3px $gray;
+  background-color: $white;
+  color: $black;
+  letter-spacing: 0.005em;
+  line-height: 1.4;
+  text-align: center;
+  @include min-screen($break_point_min) {
+    margin-bottom: 40px;
+    padding: 30px 0;
+    line-height: 1.4;
+  }
+  .common-title__en {
+    font-family: $montserrat;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 32px;
+    color: $blue;
+    letter-spacing: 0;
+    @include min-screen($break_point_min) {
+      font-size: 48px;
+    }
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    @include min-screen($break_point_min) {
+      font-size: 19px;
+    }
+  }
+}
+
+/* ====================
+セクションタイトル
+=======================*/
+
+.sec-title {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  @include min-screen($break_point_min) {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    font-size: 28px;
+  }
+
+  span {
+    margin-left: 7px;
+    font-size: 10px;
+    color: darken($gray, 20%);
+    @include min-screen($break_point_min) {
+      margin-left: 12px;
+      font-size: 17px;
+    }
+  }
+
+  &:after {
+    width: 25px;
+    height: 1px;
+    background-color: $darkenyellow;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include min-screen($break_point_min) {
+      width: 50px;
+    }
+  }
+}
+
+
+/* ====================
+白背景のやつ
+=======================*/
+.sec-subtitle {
+  background: #fff;
+  margin-bottom: 12px;
+  padding: 8px 12px 8px 1.8em;
+  font-size: 16px;
+  font-weight: bold;
+  text-indent: -1em;
+  @include min-screen($break_point_min) {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  &:before {
+    content:"";
+    display: inline-block;
+    width: 4px;
+    height: 19px;
+    margin-right: 10px;
+    background: $yellow;
+    vertical-align: -4px;
+    @include min-screen($break_point_min) {
+      width: 5px;
+      height: 30px;
+      vertical-align: -6px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+
+.section {
+  position: relative;
+  background-color: $lightbeige;
+  padding-bottom: 15px;
+  @include min-screen($break_point_pc) {
+    padding-bottom: 30px;
+  }
+  &:nth-of-type(even) {
+    background-color: $beige;
+  }
+  &:last-of-type {
+    padding-bottom: 40px;
+  }
+  .l-container {
+
+  }
+  .section-inner {
+    background-color: $white;
+    position: relative;
+    top: -15px;
+    padding: 20px 7px;
+    border-radius: 0 40px 0 0;
+    @include min-screen($break_point_pc) {
+      top: -30px;
+      padding: 30px 40px;
+    }
+  }
+}

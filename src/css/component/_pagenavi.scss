@@ -1,0 +1,17 @@
+
+.pagination {
+  background-color: $white;
+  padding: 10px 0;
+  @include min-screen($break_point_min) {
+    padding: 20px 0;
+  }
+  .wp-pagenavi {
+    text-align: center;
+    > a {
+      margin: 0 5px;
+    }
+    .current {
+      color: $blue;
+    }
+  }
+}

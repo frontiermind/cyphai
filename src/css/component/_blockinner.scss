@@ -1,0 +1,8 @@
+.top-news {
+  .block-inner {
+    @include min-screen($break_point_min) {
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
