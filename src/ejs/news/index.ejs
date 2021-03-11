@@ -1,0 +1,64 @@
+<%-
+  include('../common/_head', {
+    page: json['news']
+  });
+%>
+<% include ../common/_header %>
+
+    <main id="main" class="l-main index">
+        <section class="sec-content sec-case">
+            <h2 class="common-title__center l-page__title"><span class="common-title__en">News</span><span></span></h2>
+    
+            <section class="sec-child">
+              <div class="l-container">
+                <div class="block-inner l-container">
+                    <div class="content-news__list">
+
+              
+                        <dl>
+                          <dt>2021/02/05</dt>
+                          <dd><a href="../news-single/">News_title1</a></dd>
+                        </dl>
+                        
+                        <dl>
+                          <dt>2021/01/22</dt>
+                          <dd><a href="../news-single/">News_title2</a></dd>
+                        </dl>
+                        
+                        <dl>
+                          <dt>2021/01/21</dt>
+                          <dd><a href="../news-single/">News_title3</a></dd>
+                        </dl>
+                        
+                        <dl>
+                          <dt>2020/11/30</dt>
+                          <dd><a href="../news-single/">News_title4</a></dd>
+                        </dl>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="pagination">
+            <!-- <div class="wp-pagenavi">
+              <a class="previouspostslink" rel="prev" href="#"><i class="fas fa-caret-left"></i></a>
+              <span class="current">1</span>
+              <a class="page larger" title="Page 2" href="#">2</a>
+              <a class="nextpostslink" rel="next" href="#"><i class="fas fa-caret-right"></i></a>
+            </div> -->
+            <div class="wp-pagenavi" role="navigation">
+          <span aria-current="page" class="current">1</span><a class="page larger" title="Page 2" href="#">2</a><a class="page larger" title="Page 3" href="#">3</a><a class="page larger" title="Page 4" href="#">4</a><a class="page larger" title="Page 5" href="#">5</a><span class="extend">...</span><a class="nextpostslink" rel="next" href="#"><i class="fas fa-caret-right"></i></a><a class="last" href="#">last »</a>
+          </div></div>
+    
+          </section>
+    
+
+
+    </main>
+    <!-- / main -->
+
+       
+
+<!-- ここまでコンテンツ -->
+
+<% include ../common/_footer %>

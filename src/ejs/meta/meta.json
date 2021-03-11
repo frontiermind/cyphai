@@ -1,0 +1,65 @@
+{
+
+  "home": {
+    "bodyclass": "index home",
+    "title": "Project CyPhAI",
+    "description": " Project CyPhAI, funded by ANR (France) and JST (Japan), aims at formal design methods for safe AI-intensive Cyber-Physical Systems (AI-CPS).  In this 5-and -a-half-year project, we study how to model, test, verify, monitor, and control a cyber-physical systems in which AI plays a crucial role",
+    "canonical": "http://cyphai.io/",
+    "keywords": ""
+  },
+
+  "b": {
+    "bodyclass": "index_b",
+    "title": "Project CyPhAI",
+    "description": "箱崎JCから車で30分の好立地。総敷地面積850坪の関東最大級の大型ハウススタジオ。550坪の庭は一年中緑の芝生におおわれ、美しい常緑樹を植え込んでいます。2棟の戸建てスタジオは白を基調とし、自然光あふれる広々とした空間設計となっております。",
+    "canonical": "http://cyphai.io/index_b.html",
+    "keywords": ""
+  },
+
+  "about": {
+    "bodyclass": "about",
+    "title": "About this project | Project CyPhAI",
+    "description": "About this project",
+    "canonical": "http://cyphai.io/about/",
+    "keywords": ""
+  },
+
+  "members": {
+    "bodyclass": "members",
+    "title": "Members | Project CyPhAI",
+    "description": "Members",
+    "canonical": "http://cyphai.io/members/",
+    "keywords": ""
+  },
+
+  "open": {
+    "bodyclass": "open",
+    "title": "Open | Project CyPhAI",
+    "description": "Open",
+    "canonical": "http://cyphai.io/open/",
+    "keywords": ""
+  },
+
+  "meetings": {
+    "bodyclass": "meetings",
+    "title": "Meetings | Project CyPhAI",
+    "description": "Meetings",
+    "canonical": "http://cyphai.io/meetings/",
+    "keywords": ""
+  },
+  "news": {
+    "bodyclass": "news",
+    "title": "News | Project CyPhAI",
+    "description": "news",
+    "canonical": "http://cyphai.io/news/",
+    "keywords": ""
+  },
+    "news-single": {
+    "bodyclass": "news-single",
+    "title": "News | Project CyPhAI",
+    "description": "news",
+    "canonical": "http://cyphai.io/news/",
+    "keywords": ""
+  }
+
+}

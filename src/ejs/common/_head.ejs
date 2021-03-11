@@ -1,0 +1,38 @@
+<%
+  var _default = json['default'];
+  for ( var key in _default ) {
+    if ( typeof page[key] === 'undefined' ) {
+      page[key] = _default[key];
+    }
+  }
+-%>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="Project CyPhAI, funded by ANR (France) and JST (Japan), aims at formal design methods for safe AI-intensive Cyber-Physical Systems (AI-CPS).  In this 5-and -a-half-year project, we study how to model, test, verify, monitor, and control a cyber-physical systems in which AI plays a crucial role">
+  <title><%= page['title'] %></title>
+
+  <!-- ogp -->
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="<%= page['description'] %>">
+  <meta property="og:title" content="<%= page['title'] %>">
+  <meta property="og:site_name" content="<%= page['title'] %>">
+  <!-- /ogp -->
+
+  <link href="//use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="/js/script.min.js"></script>
+
+
+</head>
+
+<body id="index" class="<%= page['bodyclass'] %>">
+  <div class="l-wrapper">
+
+        
