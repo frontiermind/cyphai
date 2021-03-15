@@ -1,9 +1,6 @@
 .open{
-    .common-title__center{
-        margin-bottom: 0;
-    }
-    .sec-child{
-        padding-top: 0;
+    .sec-content{
+        padding-bottom: 0;
     }
     .open-title{
         width: 100vw;
@@ -21,7 +18,7 @@
     }
     .title-blue{
         line-height: 1;
-        margin: 30px auto;
+        margin: 50px auto 20px;
     }
     .open-list_o{
         margin-left: 15px;
@@ -30,6 +27,16 @@
         li{
             list-style-position: inside;
             list-style-type: disc;
+            margin-bottom: 10px;
+        }
+    }
+    p{
+        margin-bottom: 20px;
+        &.mb5{
+            margin-bottom: 5px;
+        }
+        strong,a{
+            color: $blue;
         }
     }
 }

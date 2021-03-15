@@ -32,9 +32,9 @@
         <div class="l-header-top">
           <div class="l-container">
             <ul class="l-header-subnavi">
-              <li class="l-header-subnavi--news"><a href="/news"><img class="subnavi-icon" src="/images/header/icon_news.png" srcset="/images/header/icon_news.png 1x,/images/header/icon_news@2x.png 2x" alt="">NEWS</a></li>
+              <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
               <li class="l-header-subnavi--en"><img class="subnavi-icon" src="/images/header/icon_global.png" srcset="/images/header/icon_global.png 1x,/images/header/icon_global@2x.png 2x" alt=""><a href="#">Japanese</a> | <a href="#">	French</a></li>
-              <li class="l-header-subnavi--tel"><img class="subnavi-icon" src="/images/header/icon_tel.png" srcset="/images/header/icon_tel.png 1x,/images/header/icon_tel@2x.png 2x" alt="">03-4212-2164</li>
+              <li class="l-header-subnavi--tel"><i class="fas fa-mobile-alt"></i>03-4212-2164</li>
             </ul>
           </div>
         </div>
@@ -54,9 +54,9 @@
   
               <nav class="globalnav">
                 <ul class="globalnav-list">
-                  <li class="gnav-filter"><a href="/">Home<span></span></a></li>
-                  <li class="gnav-product">
-                    <a class="js-gnav-child gnav-child-btn" href="/about">About this project<span></span></a>
+                  <li class="gnav-home"><a href="/">Home<span></span></a></li>
+                  <li class="gnav-about">
+                    <a class="js-gnav-child gnav-child-btn" href="/about">About<span></span></a>
                     <!-- <div class="globalnav-child">
                       <ul class="globalnav-child__list">
                         <li><a href="#">製品紹介</a></li>
@@ -64,8 +64,8 @@
                       </ul>
                     </div> -->
                   </li>
-                  <li class="gnav-case"><a href="/members">Members<span></span></a></li>
-                  <li class="gnav-product">
+                  <li class="gnav-members"><a href="/members">Members<span></span></a></li>
+                  <li class="gnav-open">
                     <a class="js-gnav-child gnav-child-btn" href="/open">
                       Open positions<span></span>
                     </a>
@@ -77,7 +77,7 @@
                       </div>
   
                   </li>
-              <li><a href="/meetings">Meetings</a></li>
+              <li class="gnav-meetings"><a href="/meetings">Meetings</a></li>
 
                   <!-- <li>
                     <a class="js-chlid-btn child-btn" href="/open">Open positions</a>
@@ -96,7 +96,7 @@
           <nav id="js-menu" class="sp-globalnav">
             <ul class="sp-globalnav-list">
               <li><a href="/">Home</a></li>
-              <li><a href="/about">About this project</a></li>
+              <li><a href="/about">About</a></li>
               <li><a href="/members">Members</a></li>
               <!-- <li><a href="#">Open positions</a></li> -->
               <li>
@@ -134,15 +134,16 @@
 
     <main id="main" class="l-main">
         <section class="sec-content sec-case">
-            <h2 class="common-title__center l-page__title"><span class="common-title__en">About the project</span><span></span></h2>
+            <h2 class="common-title__center l-page__title"><span class="common-title__en">About</span><span class="arrow-icon"></span></h2>
     
             <section class="sec-child">
               <div class="l-container">
                 <div class="block-inner">
-                  <!-- <h3 class="title-blue">「性能を最大限に引き出す役目」</h3> -->
+                  <h2 class="title-head">About the project</h2>
+                  <!-- <h3 class="title-blue"><span>About the project</span></h3> -->
                   <div class="filter-content">
                         <div class="l-container">
-                          <span class="u-fw-b"></span><p>Artificial intelligence (AI) and data sciences are revolutionizing information systems used for control and supervision of various devices (such as sensors, robots, IoT devices) with higher levels of autonomy and adaptability in uncertain and dynamically changing environments. Among such information systems are Cyber-Physical Systems (CPS) from which emerges a new generation of AI-intensive Cyber-Physical Systems (AI-CPS). Autonomous vehicles are examples to illustrate the synergy between CPS and AI. The physical processes in such a system are typically CPS, with vehicle hybrid dynamics, low-level engine control, and a high-level control loop where AI components are present in sensors, cameras, image and scene recognition modules that influence the coordination and decision making of the system to assure their autonomy. These modules are designed by training AI components (such as neural nets) that learn how to classify road conditions and react to them. </p>
+                          <figure><img src="../images/about/about_01.png" alt=""></figure><p>Artificial intelligence (AI) and data sciences are revolutionizing information systems used for control and supervision of various devices (such as sensors, robots, IoT devices) with higher levels of autonomy and adaptability in uncertain and dynamically changing environments. Among such information systems are Cyber-Physical Systems (CPS) from which emerges a new generation of AI-intensive Cyber-Physical Systems (AI-CPS). Autonomous vehicles are examples to illustrate the synergy between CPS and AI. The physical processes in such a system are typically CPS, with vehicle hybrid dynamics, low-level engine control, and a high-level control loop where AI components are present in sensors, cameras, image and scene recognition modules that influence the coordination and decision making of the system to assure their autonomy. These modules are designed by training AI components (such as neural nets) that learn how to classify road conditions and react to them. </p>
 
                             <p>AI-CPS pose a number of design challenges. On one hand, AI techniques are “unpredictable” due to a lack of formal framework to provide safety guarantees. On the other hand, the existing CPS design methods, relying on rather fixed models (that is once a system is deployed, its structure and configuration are generally fixed), face a fundamental problem because AI-CPS are supposed to learn from experience and interactions with the environment, adapt and regulate their behaviors accordingly. It is imperative to ensure that their learning-enabled components work correctly because they may directly affect people’s lives and fortune. Self-driving car accidents caused by AI failures are striking real examples. In general, the outcomes of learning activities in AI components are not easily interpretable. When coupling CPS with AI, the increased heterogeneity in dynamics and behaviors can aggravate the reliability and explainability issues, if the learning activities are not properly formalized. </p>
                             

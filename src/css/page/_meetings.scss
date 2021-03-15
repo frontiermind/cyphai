@@ -12,10 +12,13 @@
         li{
             list-style-type: disc;
             list-style-position: inside;
+            margin-bottom: 10px;
+
             ul{
                 margin-left: 20px;
                 li{
                     list-style-type: circle;
+                    margin-bottom: 10px;
                 }
             }
         }

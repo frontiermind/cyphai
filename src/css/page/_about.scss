@@ -1,0 +1,12 @@
+.about{
+    figure{
+        @include min-screen($break_point_min){
+            width: 300px;
+            float: left;
+            margin: 0 20px 20px 0;
+        }
+    }
+    p{
+        margin-bottom: 20px;
+    }
+}

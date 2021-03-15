@@ -256,6 +256,10 @@ html {
   box-sizing: border-box;
 }
 
+p {
+  line-height: 2;
+}
+
 *,
 *:before,
 *:after {
@@ -2255,21 +2259,46 @@ html body .bx-viewport {
 青文字タイトル
 =======================*/
 
-.title-blue {
+.title-head {
   position: relative;
-  margin-bottom: 25px;
-  color: #1CAEE3;
+  margin-bottom: 60px;
+  color: #3e3a39;
   font-size: 17.5px;
   text-align: center;
 }
 
-.title-blue:after {
+.title-head:after {
   width: 75px;
   height: 4px;
   content: "";
   display: block;
-  background-color: #1CAEE3;
+  background: linear-gradient(0.25turn, #1A75FF, #1CAEE3);
   margin: 10px auto 0;
+}
+
+.title-blue {
+  position: relative;
+  padding: 0 30px;
+  margin: 60px auto 20px;
+  text-align: left;
+  color: #3e3a39;
+}
+
+.title-blue:after {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: linear-gradient(0.25turn, #1A75FF, #1CAEE3);
+}
+
+.title-blue span {
+  position: relative;
+  z-index: 1;
+  padding: 0 1em;
+  background: #f4f7f9;
 }
 
 /* ====================
@@ -2282,17 +2311,20 @@ html body .bx-viewport {
   padding: 40px 0 40px;
 }
 
-.common-title__center.l-page__title:after {
-  width: 40px;
-  height: 18px;
+.common-title__center.l-page__title .arrow-icon {
   content: "";
+  color: transparent;
   display: block;
-  background-image: url(../images/common/icon_title@2x.png);
-  background-size: 40px;
   position: absolute;
-  bottom: 10px;
+  bottom: 25px;
+  width: 20px;
+  height: 20px;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -10px;
+  border: 3px solid;
+  border-color: transparent transparent #1CAEE3 #1CAEE3;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .common-title__center.l-page__title .common-title__en {
@@ -2328,17 +2360,20 @@ html body .bx-viewport {
   padding: 15px 0 45px;
 }
 
-.index .common-title__center:after {
-  width: 40px;
-  height: 18px;
+.index .common-title__center .arrow-icon {
   content: "";
+  color: transparent;
   display: block;
-  background-image: url(../images/common/icon_title@2x.png);
-  background-size: 40px;
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
+  width: 20px;
+  height: 20px;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -10px;
+  border: 3px solid;
+  border-color: transparent transparent #1CAEE3 #1CAEE3;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .common-title__center {
@@ -2355,7 +2390,6 @@ html body .bx-viewport {
 
 .common-title__center .common-title__en {
   font-family: "Montserrat", sans-serif;
-  font-style: italic;
   font-weight: 700;
   font-size: 32px;
   color: #1CAEE3;
@@ -2662,7 +2696,8 @@ html body .bx-viewport {
 }
 
 .l-footer .footer-list li.footer_menu_en a:before {
-  content: "";
+  content: "-";
+  color: #1CAEE3;
   display: inline-block;
 }
 
@@ -2679,7 +2714,8 @@ html body .bx-viewport {
 }
 
 .l-footer .footer-list a:before {
-  content: "・";
+  content: "-";
+  color: #1CAEE3;
   display: inline-block;
 }
 
@@ -2701,10 +2737,12 @@ html body .bx-viewport {
 
 .l-footer .c-pc-footer--list .footer--list > li {
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .l-footer .c-pc-footer--list .footer--list > li:before {
-  content: "・";
+  content: "-";
+  color: #1CAEE3;
   display: inline-block;
 }
 
@@ -2894,7 +2932,7 @@ globalnav
   content: "";
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, #1CAEE3, #1CAEE3);
+  background: linear-gradient(to right, #1A75FF, #1CAEE3);
   bottom: 0;
   left: 0;
   -webkit-transform: scale(0);
@@ -2960,6 +2998,18 @@ common header
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.l-header .l-header-top .fa-newspaper {
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: -0.3px;
+}
+
+.l-header .l-header-top .fa-mobile-alt {
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 .l-header .l-header__title {
@@ -3037,7 +3087,7 @@ common header
 .l-header .l-header-sp-navi {
   float: right;
   display: table;
-  margin-top: 8px;
+  margin-top: 13px;
 }
 
 .l-header .l-header-sp-navi > li {
@@ -3093,6 +3143,10 @@ common header
 }
 
 /* ページごとのスタイル */
+
+.about p {
+  margin-bottom: 20px;
+}
 
 /*=========================
 common lower pages settings
@@ -3222,13 +3276,84 @@ page contents
   margin-bottom: 0;
 }
 
-.l-tow__columns .top-content-list {
-  margin-top: 6px;
+.index .common-title__center .common-title__en {
+  font-weight: 500;
 }
 
-.l-tow__columns .content-links-list li {
+.index .title-head {
+  background-color: #ffffff;
+  padding: 50px;
+  box-shadow: 0px 4px 5px -3px #aeaeae;
+}
+
+.index .l-contents__wrapper {
+  box-shadow: 0 1px 11px -1px #ddd;
+}
+
+.top-content-list {
+  margin-top: 6px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.top-content-list li {
+  height: 250px;
+  transition: all ease .3s;
+  margin-bottom: 20px;
   width: 100%;
-  margin: 10px auto;
+}
+
+.top-content-list li:nth-child(1) {
+  background-image: url(/images/index/pic_content01.jpg);
+}
+
+.top-content-list li:nth-child(2) {
+  background-image: url(/images/index/pic_content02.jpg);
+}
+
+.top-content-list li:nth-child(3) {
+  background-image: url(/images/index/pic_content03.jpg);
+}
+
+.top-content-list li:nth-child(3) .top-content-list__txt {
+  float: right;
+}
+
+.top-content-list li:nth-child(4) {
+  background-image: url(/images/index/pic_content04.jpg);
+}
+
+.top-content-list li:nth-child(4) .top-content-list__txt {
+  float: right;
+}
+
+.top-content-list li:hover {
+  background-size: 110%;
+}
+
+.top-content-list li a {
+  display: block;
+  height: 250px;
+}
+
+.top-content-list .top-content-list__title {
+  text-align: center;
+  font-size: 16px;
+}
+
+.top-content-list .top-content-list__txt {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 120px;
+  height: 130px;
+  padding: 10px 20px;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.8);
+  overflow-wrap: break-word;
 }
 
 .mainvisual {
@@ -3379,44 +3504,6 @@ top-doctor
 content
 =================== */
 
-.top-content-list {
-  margin-top: 18px;
-}
-
-.top-content-list > li {
-  margin-top: 7px;
-  padding: 15px 10px 25px;
-  background-color: #ffffff;
-}
-
-.top-content-list .top-content-list__title--pc {
-  display: none;
-}
-
-.top-content-list .top-content-list__pic {
-  margin-bottom: 15px;
-}
-
-.top-content-list p {
-  margin-bottom: 15px;
-}
-
-.top-content-list__title {
-  margin-bottom: 15px;
-  font-size: 14.5px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.top-content-list__title span {
-  display: block;
-  font-size: 14px;
-  color: #1CAEE3;
-  font-weight: normal;
-  font-family: "Montserrat", sans-serif;
-  font-style: italic;
-}
-
 /* ================
 news
 =================== */
@@ -3428,7 +3515,37 @@ news
   background-color: #ffffff;
 }
 
+.top-content-news .top-title__wrapper,
+.top-content-contribution .top-title__wrapper {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.top-content-news .top-title__wrapper .title-blue,
+.top-content-contribution .top-title__wrapper .title-blue {
+  margin-top: 20px;
+  padding: 0px 42px;
+  text-align: center;
+}
+
+.top-content-news .top-title__wrapper .title-blue span,
+.top-content-contribution .top-title__wrapper .title-blue span {
+  background-color: #ffffff;
+}
+
+.top-content-news .top-content-list__title span,
+.top-content-contribution .top-content-list__title span {
+  display: block;
+  font-size: 19px;
+  text-align: center;
+  color: #1CAEE3;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+}
+
 .content-news__list > dl {
+  padding: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #1CAEE3;
 }
@@ -3534,6 +3651,7 @@ contribution
 .meetings .meetings-list li {
   list-style-type: disc;
   list-style-position: inside;
+  margin-bottom: 10px;
 }
 
 .meetings .meetings-list li ul {
@@ -3542,6 +3660,7 @@ contribution
 
 .meetings .meetings-list li ul li {
   list-style-type: circle;
+  margin-bottom: 10px;
 }
 
 .members .two-columns {
@@ -3559,6 +3678,7 @@ contribution
 .members .two-columns .column li {
   list-style-type: disc;
   list-style-position: inside;
+  margin-bottom: 10px;
 }
 
 .news-single {
@@ -3569,12 +3689,8 @@ contribution
   line-height: 1;
 }
 
-.open .common-title__center {
-  margin-bottom: 0;
-}
-
-.open .sec-child {
-  padding-top: 0;
+.open .sec-content {
+  padding-bottom: 0;
 }
 
 .open .open-title {
@@ -3594,7 +3710,7 @@ contribution
 
 .open .title-blue {
   line-height: 1;
-  margin: 30px auto;
+  margin: 50px auto 20px;
 }
 
 .open .open-list_o {
@@ -3604,6 +3720,20 @@ contribution
 .open .open-list li {
   list-style-position: inside;
   list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+.open p {
+  margin-bottom: 20px;
+}
+
+.open p.mb5 {
+  margin-bottom: 5px;
+}
+
+.open p strong,
+.open p a {
+  color: #1CAEE3;
 }
 
 /* ユーティリティ(color, size, spacing, etc.) */
@@ -4583,14 +4713,14 @@ contribution
     font-size: 17px;
   }
 
-  .title-blue {
+  .title-head {
     font-size: 32px;
     line-height: 1.7;
   }
 
-  .title-blue:after {
+  .title-head:after {
     width: 100px;
-    height: 5px;
+    height: 3px;
     margin-top: 25px;
   }
 
@@ -4598,12 +4728,12 @@ contribution
     padding: 120px 0 140px;
   }
 
-  .common-title__center.l-page__title:after {
-    width: 50px;
-    height: 22px;
-    bottom: 100px;
-    background-size: 50px;
-    margin-left: -25px;
+  .common-title__center.l-page__title .arrow-icon {
+    border: 3px solid;
+    border-color: transparent transparent #1CAEE3 #1CAEE3;
+    width: 30px;
+    height: 30px;
+    bottom: 110px;
   }
 
   .common-title__center.l-page__title .common-title__en {
@@ -4640,12 +4770,12 @@ contribution
     background-size: cover;
   }
 
-  .index .common-title__center:after {
-    width: 50px;
-    height: 22px;
-    bottom: 20px;
-    background-size: 50px;
-    margin-left: -25px;
+  .index .common-title__center .arrow-icon {
+    border: 3px solid;
+    border-color: transparent transparent #1CAEE3 #1CAEE3;
+    width: 30px;
+    height: 30px;
+    bottom: 10px;
   }
 
   .common-title__center {
@@ -4880,27 +5010,27 @@ contribution
     display: none;
   }
 
-  .filter .gnav-filter > a:after {
+  .home .gnav-home > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
 
-  .product .gnav-product > a:after {
+  .about .gnav-about > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
 
-  .case-study .gnav-case > a:after {
+  .members .gnav-members > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
 
-  .company .gnav-company > a:after {
+  .open .gnav-open > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
 
-  .contribution .gnav-contribution > a:after {
+  .meetings .gnav-meetings > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
@@ -4942,7 +5072,12 @@ contribution
   }
 
   .l-header .l-header-subnavi {
-    display: table;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     float: right;
   }
 
@@ -4974,7 +5109,13 @@ contribution
   }
 
   .sec-child {
-    padding: 50px 0 60px;
+    padding: 100px 0 60px;
+  }
+
+  .about figure {
+    width: 300px;
+    float: left;
+    margin: 0 20px 20px 0;
   }
 
   .page-header {
@@ -5049,31 +5190,22 @@ contribution
     margin: auto;
   }
 
-  .l-tow__columns .main-contents {
-    width: 70%;
+  .top-content-list li {
+    margin-bottom: 0;
+    background-size: 100%;
+    background-position: center;
+    width: 50%;
   }
 
-  .l-tow__columns .sub-contents {
-    width: 35%;
-    margin: 0 0 0 20px;
+  .top-content-list .top-content-list__title {
+    padding: 15px 0;
+    font-size: 22px;
   }
 
-  .l-tow__columns .top-content-list .top-content-list__txt {
-    width: 180px;
-    overflow-wrap: break-word;
-    word-break: normal;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  .l-tow__columns .content-news__list {
-    width: 100%;
-  }
-
-  .l-tow__columns .content-links-list {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .top-content-list .top-content-list__txt {
+    margin: auto 0;
+    width: 50%;
+    height: 100%;
   }
 
   .top-lead {
@@ -5162,47 +5294,19 @@ contribution
     margin: 0 auto;
   }
 
-  .top-content-list > li {
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-
-  .top-content-list .top-content-list__title--sp {
-    display: none;
-  }
-
-  .top-content-list .top-content-list__title--pc {
-    display: block;
-  }
-
-  .top-content-list .top-content-list__pic {
-    margin: 0;
-  }
-
-  .top-content-list .top-content-list__txt {
-    width: 240px;
-    position: absolute;
-    left: 0;
-    top: 15px;
-    padding: 30px 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0;
-  }
-
-  .top-content-list__title {
-    padding: 0;
-    position: relative;
-    font-size: 19px;
-  }
-
-  .top-content-list__title span {
-    font-size: 17px;
+  .top-content-news,
+  .top-content-contribution {
+    padding: 25px 10px 50px !important;
   }
 
   .top-content-news,
   .top-content-contribution {
     padding: 25px 10px 30px;
+  }
+
+  .top-content-news .top-content-list__title--sp,
+  .top-content-contribution .top-content-list__title--sp {
+    display: none;
   }
 
   .content-news__list {
