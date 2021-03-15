@@ -672,6 +672,7 @@ input[type="text"] {
 .block-select select {
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   padding: 3px 20px 3px 5px;
   border: 1px solid #ccc;
@@ -1267,6 +1268,7 @@ html.lb-disable-scrolling {
 .mfp-preloader,
 .mfp-counter {
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
@@ -1776,6 +1778,7 @@ img.mfp-img {
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -ms-touch-action: pan-y;
@@ -5113,7 +5116,7 @@ contribution
   }
 
   .about figure {
-    width: 300px;
+    width: 490px;
     float: left;
     margin: 0 20px 20px 0;
   }
