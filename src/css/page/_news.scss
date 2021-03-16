@@ -1,5 +1,9 @@
 .news{
-  .sec-content{
-    // padding-bottom: 0;
+  article{
+    overflow-wrap: break-word;
+    .article-detail_header__date{
+      text-align: right;
+      color: $gray;
+    }
   }
 }

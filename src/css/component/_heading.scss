@@ -300,6 +300,11 @@
           background-image: none;
         }
       }
+      .arrow-icon{
+        @include min-screen($break_point_min) {
+          bottom: 15px;
+        }
+      }
     }
   } 
     

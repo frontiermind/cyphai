@@ -17,16 +17,16 @@ textarea {
 	color: $black;
 	border: none;
 	padding: 2px 5px;
-	border: 1px solid #ccc;
+	border: 1px solid $gray;
 	border-radius: 4px;
-  background-color: #f6f7f7;
+  	background-color: $white;
 	&:focus {
-		color: $color__text-input-focus;
+		border: 1px solid $blue2;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $blue2;
 }
 
 textarea {
@@ -40,7 +40,7 @@ textarea {
 
 input[type="text"] {
 	display: block;
-	border: 1px solid #ccc;
+	border: 1px solid $gray;
 	@include min-screen($break_point_min) {
 
 		font-size: 16px;
@@ -155,4 +155,8 @@ input[type="text"] {
 input[type="text"].input-postal {
 	display: inline-block;
 
+}
+
+input[type="submit"]{
+	border: 1px solid $blue2;
 }

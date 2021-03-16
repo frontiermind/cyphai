@@ -583,9 +583,9 @@ textarea {
   color: #3e3a39;
   border: none;
   padding: 2px 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #888888;
   border-radius: 4px;
-  background-color: #f6f7f7;
+  background-color: #ffffff;
 }
 
 input[type="text"]:focus,
@@ -604,11 +604,11 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+  border: 1px solid #1A75FF;
 }
 
 select {
-  border: 1px solid #ccc;
+  border: 1px solid #1A75FF;
 }
 
 textarea {
@@ -619,7 +619,7 @@ textarea {
 
 input[type="text"] {
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid #888888;
 }
 
 .input-20 {
@@ -690,6 +690,10 @@ input[type="text"] {
 
 input[type="text"].input-postal {
   display: inline-block;
+}
+
+input[type="submit"] {
+  border: 1px solid #1A75FF;
 }
 
 body,
@@ -3296,6 +3300,11 @@ page contents
   height: 30px;
 }
 
+.contact .entry-header,
+.contact .entry-footer {
+  display: none;
+}
+
 .event .title-blue {
   line-height: 1;
 }
@@ -3711,6 +3720,15 @@ contribution
 
 .news-single .title-blue {
   line-height: 1;
+}
+
+.news article {
+  overflow-wrap: break-word;
+}
+
+.news article .article-detail_header__date {
+  text-align: right;
+  color: #888888;
 }
 
 .open .sec-content {
@@ -4804,6 +4822,11 @@ contribution
   .news .common-title__center:after,
   .news-single .common-title__center:after {
     background-image: none;
+  }
+
+  .news .common-title__center .arrow-icon,
+  .news-single .common-title__center .arrow-icon {
+    bottom: 15px;
   }
 
   .index .common-title__center {
