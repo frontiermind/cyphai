@@ -62,8 +62,32 @@ global-navigation active style
   }
 }
 
-.contact {
-  .gnav-contact {
+.event {
+  .gnav-event {
+    > a {
+      &:after {
+        @include min-screen($break_point_min) {
+          transform: scale(1) !important;
+        }
+      }
+    }
+  }
+}
+
+.publication {
+  .gnav-publication {
+    > a {
+      &:after {
+        @include min-screen($break_point_min) {
+          transform: scale(1) !important;
+        }
+      }
+    }
+  }
+}
+
+.link {
+  .gnav-link {
     > a {
       &:after {
         @include min-screen($break_point_min) {
@@ -143,7 +167,7 @@ globalnav
       > a {
         display: block;
         position: relative;
-        padding: 30px 24px;
+        padding: 30px 22px;
         text-align: center;
         &:hover {
           &:after {

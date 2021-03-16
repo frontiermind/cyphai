@@ -32,9 +32,10 @@
         <div class="l-header-top">
           <div class="l-container">
             <ul class="l-header-subnavi">
+              
+              <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
               <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-              <li class="l-header-subnavi--en"><img class="subnavi-icon" src="/images/header/icon_global.png" srcset="/images/header/icon_global.png 1x,/images/header/icon_global@2x.png 2x" alt=""><a href="#">Japanese</a> | <a href="#">	French</a></li>
-              <li class="l-header-subnavi--tel"><i class="fas fa-mobile-alt"></i>03-4212-2164</li>
+              <li class="l-header-subnavi--news"><a href="/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
             </ul>
           </div>
         </div>
@@ -45,10 +46,10 @@
               <h1 class="l-header__title"><a href="/"><img src="/images/header/logo.png" srcset="/images/header/logo.png 1x,/images/header/logo@2x.png 2x" alt="CyPhAI"></a></h1>
   
               <ul class="l-header-sp-navi">
-                <li><a href="#"><img src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt=""></a></li>
-                <li><a href="#"><img src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
-                <li><a onclick="return gtag_report_conversion('tel:03-4212-2164');" href="#"><img src="/images/common/icon_tel.png" srcset="/images/common/icon_tel.png 1x,/images/common/icon_tel@2x.png 2x" alt=""></a></li>
-                <li><a href="#"><img src="/images/common/icon_mail.png" srcset="/images/common/icon_mail.png 1x,/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                <li class="en"><a href="#"><img src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt=""></a></li>
+                <li class="ja"><a href="#"><img src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
+                <li class="fr"><a href="#"><img src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt=""></a></li>
+                <li><a href="contact"><img src="/images/common/icon_mail.png" srcset="/images/common/icon_mail.png 1x,/images/common/icon_mail@2x.png 2x" alt=""></a></li>
                 <li id="js-menuToggle"><img src="/images/common/icon_menu.png" srcset="/images/common/icon_menu.png 1x,/images/common/icon_menu@2x.png 2x" alt=""></li>
               </ul>
   
@@ -65,9 +66,10 @@
                     </div> -->
                   </li>
                   <li class="gnav-members"><a href="/members">Members<span></span></a></li>
+                  <li class="gnav-event"><a href="/event">Event<span></span></a></li>
                   <li class="gnav-open">
                     <a class="js-gnav-child gnav-child-btn" href="/open">
-                      Open positions<span></span>
+                      Open position<span></span>
                     </a>
                       <div class="globalnav-child">
                         <ul class="globalnav-child__list">
@@ -77,7 +79,11 @@
                       </div>
   
                   </li>
-              <li class="gnav-meetings"><a href="/meetings">Meetings</a></li>
+              <li class="gnav-publication"><a href="/publication">Publication</a></li>
+              <li class="gnav-link"><a href="/link">Link</a></li>
+              <!-- <li><a href="/link">Link</a></li> -->
+
+              <!-- <li class="gnav-contact"><a href="/contact">Contact</a></li> -->
 
                   <!-- <li>
                     <a class="js-chlid-btn child-btn" href="/open">Open positions</a>
@@ -107,6 +113,7 @@
                 </ul>
               </li>
               <li><a href="/meetings">Meetings</a></li>
+              <li><a href="/link">Link</a></li>
               <!-- <li><a href="#">お問い合わせ</a></li> -->
               <!-- <li>
                 <a class="js-chlid-btn child-btn" href="#">採用情報</a>
@@ -198,17 +205,26 @@
 <div class="footer-top">
   <ul class="u-pc-hide footer-list flex-col-sp flex-col-sp_2">
     <li><a href="/">Home</a></li>
-    <li><a href="/about">About this project</a></li>
+    <li><a href="/about">About</a></li>
     <li><a href="/members">Members</a></li>
+    <li><a href="/publication">Publication</a></li>
     <li><a href="/open">Open positions</a></li>
     <li><a href="/meetings">Meetings</a></li>
+    <li><a href="/link">Link</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 
   <div class="c-pc-footer--list">
     <ul class="footer--list">
       <li><a href="/">Home</a></li>
-      <li><a href="/about">About this project</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <ul class="footer--list">
       <li><a href="/members">Members</a></li>
+
+      <li><a href="/publication">Publication</a></li>
+      
+      
     </ul>
     <ul class="footer--list">
       <li>
@@ -221,18 +237,11 @@
       
     </ul>
     <ul class="footer--list">
-      <li>
-        <a href="/meetings">Meetings</a>
-      </li>
+      <li><a href="/meetings">Meetings</a></li>
+      <li><a href="/link">Link</a></li>
     </ul>
     <ul class="footer--list">
-      <!-- <li>
-        <a href="#">Privacy</a>
-      </li> -->
-      <!-- <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">社会貢献活動</a></li>
-      <li><a href="#">お問い合わせ</a></li>
-      <li><a href="#">English</a></li> -->
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </div>

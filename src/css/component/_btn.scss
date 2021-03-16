@@ -7,7 +7,7 @@
 .btn {
   width: 100px;
   padding: 10px 0;
-  border: 1px solid $green;
+  border: 1px solid $blue2;
   color: $black;
   display: inline-block;
   text-align: center;
@@ -25,8 +25,8 @@
     color: $black;
   }
   &:hover {
-    background: $green;
-    border: 1px solid $green;
+    background: $blue2;
+    border: 1px solid $blue2;
     color: $white;
   }
 
@@ -63,10 +63,10 @@
 
   &.btn-blue {
     background-color: transparent;
-    border: 1px solid $blue;
+    border: 1px solid $blue2;
     color: $black;
     &:hover {
-      background-color: $blue;
+      background-color: $blue2;
       color: $white;
     }
   }

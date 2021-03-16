@@ -60,6 +60,34 @@
     "description": "news",
     "canonical": "http://cyphai.io/news/",
     "keywords": ""
+  },
+    "event": {
+    "bodyclass": "event",
+    "title": "Event | Project CyPhAI",
+    "description": "event",
+    "canonical": "http://cyphai.io/event/",
+    "keywords": ""
+  },
+    "link": {
+    "bodyclass": "link",
+    "title": "Link | Project CyPhAI",
+    "description": "link",
+    "canonical": "http://cyphai.io/link/",
+    "keywords": ""
+  },
+    "publication": {
+    "bodyclass": "publication",
+    "title": "Publication | Project CyPhAI",
+    "description": "publication",
+    "canonical": "http://cyphai.io/publication/",
+    "keywords": ""
+  },
+    "contact": {
+    "bodyclass": "contact",
+    "title": "Contact | Project CyPhAI",
+    "description": "contact",
+    "canonical": "http://cyphai.io/contact/",
+    "keywords": ""
   }
 
 }

@@ -428,7 +428,7 @@ news
       display: block;
       font-size: 19px;
       text-align: center;
-      color: $blue;
+      color: $blue2;
       font-weight: normal;
       font-family: "Montserrat", sans-serif;
     }
@@ -444,13 +444,13 @@ news
   > dl {
     padding: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $blue;
+    border-bottom: 1px solid $blue2;
     @include min-screen($break_point_min) {
       display: block;
       margin-bottom: 0;
     }
     > dt {
-      color: $blue;
+      color: $blue2;
       @include min-screen($break_point_min) {
         display: table-cell;
         width: 120px;

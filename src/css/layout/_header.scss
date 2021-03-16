@@ -14,11 +14,11 @@ common header
       height: auto;
       padding: 3px 0;
     }
-    .fa-newspaper{
-      font-size: 20px;
+    .fa-newspaper, .fa-envelope{
+      font-size: 22px;
       margin-right: 5px;
       position: relative;
-      top: -0.3px;
+      top: 1px;
     }
     .fa-mobile-alt{
       font-size: 20px;
@@ -32,14 +32,12 @@ common header
     width: 136px;
     float: left;
     @include min-screen($break_point_min) {
-    width: 185px;
+    width: 135px;
     margin-top: 15px;
     position: relative;
   }
   img{
-    @include min-screen($break_point_min) {
-      max-width: 70%;
-    }
+    
   }
 }
 
@@ -53,7 +51,7 @@ common header
     > li {
       display: table-cell;
       padding-left: 20px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: bold;
       color:  $white;
       vertical-align: middle;
@@ -80,6 +78,7 @@ common header
         display: inline-block;
       }
       img{
+        width: 25px;
         position: relative;
         top: -2px;
       }
@@ -111,10 +110,6 @@ common header
       top: 0;
     }
     .l-container {
-      // display: flex;
-      // justify-content: space-between;
-      // flex-wrap: wrap;
-      // align-items: center;
       position: static;
     }
   }
@@ -132,12 +127,20 @@ common header
       padding-right: 5px;
       img {
         width: 26px;
+        @include min-screen($break_point_min) {
+          border: none;
+        }
       }
       &:last-child {
         padding-right: 0;
         img {
           width: 30px;
         }
+      }
+    }
+    .en, .ja, .fr{
+      img{
+        border: $gray 1px solid;
       }
     }
   }

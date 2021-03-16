@@ -22,7 +22,7 @@ th {
 
 	  dt {
 			padding: 10px;
-      background-color: $blue;
+      		background-color: $blue;
 			color: $white;
 			font-weight: bold;
 			@include min-screen($break_point_min) {

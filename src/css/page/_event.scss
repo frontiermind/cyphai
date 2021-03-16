@@ -1,0 +1,26 @@
+.event{
+    .title-blue{
+        line-height: 1;
+        &__sub{
+            font-size: 16px;
+        }
+    }
+    .meetings-list{
+        display: block;
+        width: 600px;
+        margin: 0 auto 40px;
+        li{
+            list-style-type: disc;
+            list-style-position: inside;
+            margin-bottom: 10px;
+
+            ul{
+                margin-left: 20px;
+                li{
+                    list-style-type: circle;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

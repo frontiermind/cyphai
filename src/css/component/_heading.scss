@@ -216,11 +216,11 @@
         left: 50%;
         margin-left: -10px;
         border: 3px solid;
-        border-color:  transparent transparent $blue $blue;
+        border-color:  transparent transparent $blue2 $blue2;
         transform: rotate(-45deg);
         @include min-screen($break_point_min) {
           border: 3px solid;
-          border-color:  transparent transparent $blue $blue;
+          border-color:  transparent transparent $blue2 $blue2;
           width: 30px;
           height: 30px;
           bottom: 110px;
@@ -259,6 +259,34 @@
     background-image: url(../images/common/sp_mv_meetings@2x.png);
     @include min-screen($break_point_min) {
       background-image: url(../images/common/mv_meetings@2x.png);
+    }
+  }
+
+  .event .common-title__center {
+    background-image: url(../images/common/sp_mv_event@2x.png);
+    @include min-screen($break_point_min) {
+      background-image: url(../images/common/mv_event@2x.png);
+    }
+  }
+
+  .publication .common-title__center {
+    background-image: url(../images/common/sp_mv_publication@2x.png);
+    @include min-screen($break_point_min) {
+      background-image: url(../images/common/mv_publication@2x.png);
+    }
+  }
+
+  .link .common-title__center {
+    background-image: url(../images/common/sp_mv_link@2x.png);
+    @include min-screen($break_point_min) {
+      background-image: url(../images/common/mv_link@2x.png);
+    }
+  }
+
+  .contact .common-title__center {
+    background-image: url(../images/common/sp_mv_contact@2x.png);
+    @include min-screen($break_point_min) {
+      background-image: url(../images/common/mv_contact@2x.png);
     }
   }
 
@@ -332,7 +360,7 @@
     font-family: $montserrat;
     font-weight: 700;
     font-size: 32px;
-    color: $blue;
+    color: $blue2;
     letter-spacing: 0;
     @include min-screen($break_point_min) {
       font-size: 48px;
