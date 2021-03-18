@@ -1,4 +1,7 @@
 .members{
+    .entry-header, .entry-footer{
+        display: none;
+    }
     .two-columns{
         display: flex;
         justify-content: space-between;

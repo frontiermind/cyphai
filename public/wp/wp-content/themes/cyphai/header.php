@@ -18,10 +18,12 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
   <link href="//use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-  <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
-  
+  <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+  <?php load_jquery(); ?>
 	<?php wp_head(); ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/script.min.js"></script>
+
 </head>
 
 <body <?php body_class();  ?>>

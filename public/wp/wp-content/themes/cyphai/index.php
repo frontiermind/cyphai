@@ -82,12 +82,14 @@ get_header();
                 'posts_per_page' => 5
               );
 			  $myposts = get_posts($args);
+			  $cats = get_the_category();
     ?>
     <?php if($myposts): ?>
-    <?php foreach($myposts as $post) : setup_postdata($post); ?>
+    <?php foreach($myposts as $post) : setup_postdata($post); $terms = get_the_terms( get_the_ID(), 'news_cat');?>
                         <dl>
+							<?php #var_dump(get_the_term_list( get_the_id(), 'news_cat'));?>
                           <dt><?php the_time('Y.m.d'); ?></dt>
-                          <dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                          <dd><span class="category"><?= esc_html($terms[0]->name); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
                         </dl>
             
                         <?php  endforeach; endif;?>

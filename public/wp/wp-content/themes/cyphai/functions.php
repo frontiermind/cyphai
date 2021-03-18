@@ -66,19 +66,19 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'script',
-				'style',
-				'navigation-widgets',
-			)
-		);
+		// add_theme_support(
+		// 	'html5',
+		// 	array(
+		// 		'search-form',
+		// 		'comment-form',
+		// 		'comment-list',
+		// 		'gallery',
+		// 		'caption',
+		// 		'script',
+		// 		'style',
+		// 		'navigation-widgets',
+		// 	)
+		// );
 
 		/**
 		 * Add support for core custom logo.
@@ -227,10 +227,10 @@ function twentynineteen_scripts() {
 
 	wp_style_add_data( 'twentynineteen-style', 'rtl', 'replace' );
 
-	if ( has_nav_menu( 'menu-1' ) ) {
-		wp_enqueue_script( 'twentynineteen-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '20181214', true );
-		wp_enqueue_script( 'twentynineteen-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '20181231', true );
-	}
+	// if ( has_nav_menu( 'menu-1' ) ) {
+	// 	wp_enqueue_script( 'twentynineteen-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '20181214', true );
+	// 	wp_enqueue_script( 'twentynineteen-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '20181231', true );
+	// }
 
 	wp_enqueue_style( 'twentynineteen-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
@@ -251,9 +251,9 @@ add_action( 'wp_enqueue_scripts', 'twentynineteen_scripts' );
 function twentynineteen_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
 	?>
-	<script>
+	<!-- <script>
 	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
+	</script> -->
 	<?php
 }
 add_action( 'wp_print_footer_scripts', 'twentynineteen_skip_link_focus_fix' );
@@ -339,6 +339,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/block-patterns.php';
 
 // お知らせ カスタム投稿タイプ  -----------------------------------------------------------------------
+
 register_post_type(
 	'news', //投稿タイプ名
 	array(
@@ -360,6 +361,23 @@ register_post_type(
 		'thumbnail',
 		'page-attributes',
 		'excerpt'
-	  )
+	  ),
 	)
-  );
+);
+register_taxonomy('news_cat', 'news',array(    
+'public' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_admin_column' => true,
+'show_ui' => true,
+'hierarchical' => true,
+'query_var' => true,
+'rewrite' => true));
+
+  function load_jquery() {
+    if ( !is_admin() ) {
+        wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js', array(), '2.2.2');
+    }
+}
+add_action('init', 'load_jquery');

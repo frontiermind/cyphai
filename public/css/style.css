@@ -3616,12 +3616,14 @@ news
   color: #1A75FF;
 }
 
-.content-news__list > dl > dd > a::before {
-  content: 'category';
+.content-news__list > dl > dd .category {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
   border: 1px solid #888888;
   background-color: #888888;
   border-radius: 5px;
-  color: #ffffff;
+  color: #ffffff !important;
   margin-right: 5px;
   padding: 0 5px;
 }
@@ -3696,6 +3698,11 @@ contribution
   margin-top: 6px;
 }
 
+.members .entry-header,
+.members .entry-footer {
+  display: none;
+}
+
 .members .two-columns {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3729,6 +3736,18 @@ contribution
 .news article .article-detail_header__date {
   text-align: right;
   color: #888888;
+}
+
+.news .category {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #888888;
+  background-color: #888888;
+  border-radius: 5px;
+  color: #ffffff !important;
+  margin-right: 5px;
+  padding: 0 5px;
 }
 
 .open .sec-content {
@@ -5086,6 +5105,11 @@ contribution
   .members .gnav-members > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
+  }
+
+  .home .members .gnav-members > a:after {
+    -webkit-transform: scale(0) !important;
+    transform: scale(0) !important;
   }
 
   .open .gnav-open > a:after {

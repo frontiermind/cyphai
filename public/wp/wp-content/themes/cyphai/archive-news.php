@@ -10,14 +10,14 @@
               <div class="l-container">
                 <div class="block-inner l-container">
                     <div class="content-news__list">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $terms = get_the_terms( get_the_ID(), 'news_cat'); ?>
               
                         <dl>
                           <dt><?php the_time('Y.m.d'); ?></dt>
-                          <dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                          <dd><span class="category"><?= esc_html($terms[0]->name); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
                         </dl>
             
-                        <?php  endwhile; endif;?>
+                        <?php  endwhile;  endif;?>
                     </div>
                     
                 </div>

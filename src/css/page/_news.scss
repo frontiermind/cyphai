@@ -6,4 +6,15 @@
       color: $gray;
     }
   }
+  .category {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid $gray;
+    background-color: $gray;
+    border-radius: 5px;
+    color: $white !important;
+    margin-right: 5px;
+    padding: 0 5px
+}
 }

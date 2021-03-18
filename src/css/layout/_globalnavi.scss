@@ -37,6 +37,20 @@ global-navigation active style
   }
 }
 
+.home{
+  .members {
+    .gnav-members {
+      > a {
+        &:after {
+          @include min-screen($break_point_min) {
+            transform: scale(0) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
 .open {
   .gnav-open {
     > a {

@@ -461,16 +461,16 @@ news
       @include min-screen($break_point_min) {
         display: table-cell;
       }
-      > a{
-        &::before{
-          content: 'category';
+      .category {
+          width: 100px;
+          display: inline-block;
+          text-align: center;
           border: 1px solid $gray;
           background-color: $gray;
           border-radius: 5px;
-          color: $white;
+          color: $white !important;
           margin-right: 5px;
           padding: 0 5px
-        }
       }
     }
   }

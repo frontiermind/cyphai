@@ -258,6 +258,7 @@ $( function() {
       if(!$(this).hasClass('slide-btn-opacity')) {
         event.preventDefault();
         slider.goToPrevSlide();
+        console.log('prev-ok!');
       }
     });
     $(document).on('click','.slide-next-btn', function(event) {
