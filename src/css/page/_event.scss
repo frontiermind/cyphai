@@ -1,4 +1,7 @@
 .event{
+    .entry-header, .entry-footer{
+        display: none;
+    }
     .title-blue{
         line-height: 1;
         &__sub{

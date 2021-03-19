@@ -19,8 +19,23 @@
   <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="/js/script.min.js"></script>
-
+  <!-- <script src="/js/script.min.js"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    jQuery(function($){
+  // ここに処理を書いていきます｡
+  $('#slider').slick({ //{}を入れる
+    autoplay: true, //「オプション名: 値」の形式で書く
+    arrows: true,
+    centerMode: true,
+    // centerPadding: '200px',
+    });
+  });
+  </script>
 
 </head>
 
@@ -35,7 +50,7 @@
               
               <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
               <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-              <li class="l-header-subnavi--news"><a href="/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
+              <li class="l-header-subnavi--news"><a href="/wp/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
             </ul>
           </div>
         </div>
@@ -49,7 +64,7 @@
                 <li class="en"><a href="#"><img src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt=""></a></li>
                 <li class="ja"><a href="#"><img src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
                 <li class="fr"><a href="#"><img src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt=""></a></li>
-                <li><a href="contact"><img src="/images/common/icon_mail.png" srcset="/images/common/icon_mail.png 1x,/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                <li><a href="/wp/contact"><img src="/images/common/icon_mail.png" srcset="/images/common/icon_mail.png 1x,/images/common/icon_mail@2x.png 2x" alt=""></a></li>
                 <li id="js-menuToggle"><img src="/images/common/icon_menu.png" srcset="/images/common/icon_menu.png 1x,/images/common/icon_menu@2x.png 2x" alt=""></li>
               </ul>
   
@@ -112,24 +127,13 @@
     <main id="main" class="l-main">
 
       <div class="mainvisual">
-        <div class="slider-wrapper">
-          <div class="slider-wrapper-inner">
-            <div class="box-slider">
-              <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 400px;"><ul id="slider" class=".slider" style="width: 3215%; position: relative; transition-duration: 0.5s; transform: translate3d(-2000px, 0px, 0px);"><li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1000px;" class="bx-clone"><img class="u-sp-hide" src="/images/index/slide_03.jpg" srcset="/images/index/slide_03.jpg 1x,/images/index/slide_03@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_03.jpg" srcset="/images/index/slide_sp_03.jpg 1x,/images/index/slide_sp_03@2x.jpg 2x" alt=""></li>
-                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1000px;"><img class="u-sp-hide" src="/images/index/slide_01.jpg" srcset="/images/index/slide_01.jpg 1x,/images/index/slide_01@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_01.jpg" srcset="/images/index/slide_sp_01.jpg 1x,/images/index/slide_sp_01@2x.jpg 2x" alt=""></li>
-                <li aria-hidden="false" style="float: left; list-style: none; position: relative; width: 1000px;"><img class="u-sp-hide" src="/images/index/slide_02.jpg" srcset="/images/index/slide_02.jpg 1x,/images/index/slide_02@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_02.jpg" srcset="/images/index/slide_sp_02.jpg 1x,/images/index/slide_sp_02@2x.jpg 2x" alt=""></li>
-                <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1000px;"><img class="u-sp-hide" src="/images/index/slide_03.jpg" srcset="/images/index/slide_03.jpg 1x,/images/index/slide_03@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_03.jpg" srcset="/images/index/slide_sp_03.jpg 1x,/images/index/slide_sp_03@2x.jpg 2x" alt=""></li>
-              <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 1000px;" class="bx-clone"><img class="u-sp-hide" src="/images/index/slide_01.jpg" srcset="/images/index/slide_01.jpg 1x,/images/index/slide_01@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_01.jpg" srcset="/images/index/slide_sp_01.jpg 1x,/images/index/slide_sp_01@2x.jpg 2x" alt=""></li></ul></div><div class="bx-controls"></div></div>
-            </div>
-          </div>
-        </div>
+                <ul id="slider">
+                <li aria-hidden="true"><img class="u-sp-hide" src="/images/index/slide_01.jpg" srcset="/images/index/slide_01.jpg 1x,/images/index/slide_01@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_01.jpg" srcset="/images/index/slide_sp_01.jpg 1x,/images/index/slide_sp_01@2x.jpg 2x" alt=""></li>
+                <li aria-hidden="true"><img class="u-sp-hide" src="/images/index/slide_02.jpg" srcset="/images/index/slide_02.jpg 1x,/images/index/slide_02@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_02.jpg" srcset="/images/index/slide_sp_02.jpg 1x,/images/index/slide_sp_02@2x.jpg 2x" alt=""></li>
+                <li aria-hidden="true"><img class="u-sp-hide" src="/images/index/slide_03.jpg" srcset="/images/index/slide_03.jpg 1x,/images/index/slide_03@2x.jpg 2x" alt=""><img class="u-pc-hide" src="/images/index/slide_sp_03.jpg" srcset="/images/index/slide_sp_03.jpg 1x,/images/index/slide_sp_03@2x.jpg 2x" alt=""></li>
+            </ul>
 
-        <div class="box-slide-control">
-          <ul>
-            <li class="slide-prev-btn"><img src="/images/lib/arrow_left.png" srcset="/images/lib/arrow_left.png 1x,/images/lib/arrow_left@2x.png 2x" alt=""></li>
-            <li class="slide-next-btn"><img src="/images/lib/arrow_right.png" srcset="/images/lib/arrow_right.png 1x,/images/lib/arrow_right@2x.png 2x" alt=""></li>
-          </ul>
-        </div>
+       
         
       </div>
 
@@ -239,7 +243,7 @@
     <li><a href="/open">Open positions</a></li>
     <li><a href="/meetings">Meetings</a></li>
     <li><a href="/link">Link</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="/wp/contact">Contact</a></li>
   </ul>
 
   <div class="c-pc-footer--list">
@@ -269,7 +273,7 @@
       <li><a href="/link">Link</a></li>
     </ul>
     <ul class="footer--list">
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/wp/contact">Contact</a></li>
     </ul>
   </div>
 </div>

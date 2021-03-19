@@ -19,8 +19,23 @@
   <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
   <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="/js/script.min.js"></script>
-
+  <!-- <script src="/js/script.min.js"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    jQuery(function($){
+  // ここに処理を書いていきます｡
+  $('#slider').slick({ //{}を入れる
+    autoplay: true, //「オプション名: 値」の形式で書く
+    arrows: true,
+    centerMode: true,
+    // centerPadding: '200px',
+    });
+  });
+  </script>
 
 </head>
 
@@ -33,9 +48,9 @@
           <div class="l-container">
             <ul class="l-header-subnavi">
               
-              <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
+              <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
               <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-              <li class="l-header-subnavi--news"><a href="/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
+              <li class="l-header-subnavi--news"><a href="/wp/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
             </ul>
           </div>
         </div>
@@ -43,14 +58,14 @@
         <div class="js-header-sticky l-header-bottom">
           <div class="pc-nav-box">
             <div class="l-container">
-              <h1 class="l-header__title"><a href="/"><img src="/images/header/logo.png" srcset="/images/header/logo.png 1x,/images/header/logo@2x.png 2x" alt="CyPhAI"></a></h1>
+              <h1 class="l-header__title"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/images/header/logo.png 1x,<?php echo get_template_directory_uri(); ?>/images/header/logo@2x.png 2x" alt="CyPhAI"></a></h1>
   
               <ul class="l-header-sp-navi">
-                <li class="en"><a href="#"><img src="/images/common/icon_en_s.png" srcset="/images/common/icon_en_s.png 1x,/images/common/icon_en_s@2x.png 2x" alt=""></a></li>
-                <li class="ja"><a href="#"><img src="/images/common/icon_ja_s.png" srcset="/images/common/icon_ja_s.png 1x,/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
-                <li class="fr"><a href="#"><img src="/images/common/icon_fr_s.png" srcset="/images/common/icon_fr_s.png 1x,/images/common/icon_fr_s@2x.png 2x" alt=""></a></li>
-                <li><a href="contact"><img src="/images/common/icon_mail.png" srcset="/images/common/icon_mail.png 1x,/images/common/icon_mail@2x.png 2x" alt=""></a></li>
-                <li id="js-menuToggle"><img src="/images/common/icon_menu.png" srcset="/images/common/icon_menu.png 1x,/images/common/icon_menu@2x.png 2x" alt=""></li>
+                <li class="en"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt=""></a></li>
+                <li class="ja"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
+                <li class="fr"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt=""></a></li>
+                <li><a href="/wp/contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                <li id="js-menuToggle"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_menu@2x.png 2x" alt=""></li>
               </ul>
   
               <nav class="globalnav">
@@ -130,7 +145,7 @@
 <!-- <div class="sec-content common-contact">
   <div class="l-container">
     <h2 class="common-contact_title">ろ過・分離についての<br class="u-pc-hide">お悩み解消いたします。</h2>
-    <p class="common-contact_tel"><a class="tel-link--white" href="#" onclick="return gtag_report_conversion('tel:0284-73-1801');"><img src="/images/footer/icon_tel.png" srcset="/images/footer/icon_tel.png 1x,/images/footer/icon_tel@2x.png 2x" alt="">0284-73-1801</a><span>受付時間：平日9:00～17:30</span></p>
+    <p class="common-contact_tel"><a class="tel-link--white" href="#" onclick="return gtag_report_conversion('tel:0284-73-1801');"><img src="<?php echo get_template_directory_uri(); ?>/images/footer/icon_tel.png" srcset="<?php echo get_template_directory_uri(); ?>/images/footer/icon_tel.png 1x,<?php echo get_template_directory_uri(); ?>/images/footer/icon_tel@2x.png 2x" alt="">0284-73-1801</a><span>受付時間：平日9:00～17:30</span></p>
     <div class="common-contact_btn--box">
       <a class="common-contact_btn" href="#">お問い合わせ・資料請求</a>
     </div>
@@ -149,7 +164,7 @@
     <li><a href="/open">Open positions</a></li>
     <li><a href="/meetings">Meetings</a></li>
     <li><a href="/link">Link</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="/wp/contact">Contact</a></li>
   </ul>
 
   <div class="c-pc-footer--list">
@@ -179,7 +194,7 @@
       <li><a href="/link">Link</a></li>
     </ul>
     <ul class="footer--list">
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/wp/contact">Contact</a></li>
     </ul>
   </div>
 </div>
@@ -187,7 +202,7 @@
 
 <div class="footer-bottom">
 <div class="l-container">
-  <div class="footer-logo"><img src="/images/footer/footer_logo.png" srcset="/images/footer/footer_logo.png 1x,/images/footer/footer_logo@2x.png 2x" alt="CyPhAI"></div>
+  <div class="footer-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/footer/footer_logo.png" srcset="<?php echo get_template_directory_uri(); ?>/images/footer/footer_logo.png 1x,<?php echo get_template_directory_uri(); ?>/images/footer/footer_logo@2x.png 2x" alt="CyPhAI"></div>
   <!-- <p><strong>大塚実業株式会社</strong><br><strong>本社/本社工場</strong><br class="u-pc-hide"> 〒326-0338栃木県足利市福居町1745-1<br><span>TEL:0284-73-1801 / FAX:0284-73-1907<br></span><br>
   <strong>東京支店</strong><br class="u-pc-hide"> 〒101-0044 東京都千代田区鍛冶町2-4-8 エルヘンビル<br><span>TEL:03-3252-9831／FAX:03-3252-9833<br></span><br>
   <strong>大阪営業所</strong><br class="u-pc-hide"> 〒530-0044 大阪府大阪市北区東天満 1丁目10-15黒川ビル4階<br>TEL:06-6949-8697／FAX:06-6949-8698</p> -->

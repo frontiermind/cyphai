@@ -1,0 +1,92 @@
+.publication{
+    .content-publication__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        @include min-screen($break_point_min) {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+        li{
+            margin-bottom: 30px;
+            @include min-screen($break_point_min) {
+                margin-bottom: 60px;
+              }
+            a{
+                
+                opacity: 1;
+                display: block;
+                box-shadow: 0 1px 11px -1px #ddd;
+                .content-publication__img{
+                    figure{
+                        width: 100%;
+                        margin: 0;
+                        overflow: hidden;
+                        @include min-screen($break_point_min) {
+                            width: 300px;
+                          }
+                        img{
+                            height: 280px;
+                            object-fit: cover;
+                            transition: all ease .3s;
+                            @include min-screen($break_point_min) {
+                                height: 200px;
+                              }
+                        }
+                    }
+                }
+                .content-publication__txt{
+                    padding: 20px;
+                    background-color: $white;
+                    .content-publication__title{
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+                    .txt__sub{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .category{
+                            padding: 3px 5px;
+                            border-radius: 25px;
+                            background-color: $blue2;
+                            color: $white;
+                        }
+                        .time{
+                            color: $gray;
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                        }
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    article{
+        overflow-wrap: break-word;
+        .article-detail_header__date{
+          text-align: right;
+          color: $gray;
+        }
+      }
+      .category {
+        width: 100px;
+        display: inline-block;
+        text-align: center;
+        background-color: $gray;
+        border-radius: 5px;
+        color: $white !important;
+        margin-right: 5px;
+        padding: 0 5px
+    }
+}

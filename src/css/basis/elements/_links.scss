@@ -18,7 +18,9 @@ a {
 		outline: 0;
 	}
   &:hover {
-    opacity: 0.8;
+    @include min-screen($break_point_min) {
+      opacity: 0.8;
+    }
   }
 }
 

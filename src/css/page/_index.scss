@@ -1,5 +1,8 @@
 
-.index {
+
+
+.home{
+
   .common-title__center {
     margin-bottom: 0;
     .common-title__en{
@@ -17,6 +20,46 @@
   .l-contents__wrapper{
     box-shadow: 0 1px 11px -1px #ddd;
   }
+
+  #slider{
+    width: 100% !important;
+  }
+  .slick-next{
+    opacity: 1;
+    z-index: 1;
+    right: 15px;
+    &:before{
+      opacity: 1;
+      font-size: 0;
+      content: url(/images/lib/arrow_right.png);
+    }
+  }
+    
+  
+  .slick-prev{
+    opacity: 1;
+    z-index: 1;
+    left: 15px;
+    &:before{
+      font-size: 0;
+      content: url(/images/lib/arrow_left.png);
+    }
+  }
+
+  #slider li{
+    overflow: hidden;
+    position: relative;
+    @include min-screen($break_point_min) {
+      width: auto !important;
+      // padding: 0 100px;
+      display: block;
+      margin: 0 auto;
+    }
+    img{
+      width: 1000px;
+      height: 400px;
+    }
+}
 }
 
 .top-content-list{
@@ -29,6 +72,7 @@
     transition: all ease .3s;
     margin-bottom: 20px;
     width: 100%;
+    position: relative;
     @include min-screen($break_point_min) {
     margin-bottom: 0;
       background-size: 100%;
@@ -54,12 +98,19 @@
       }
     }
     &:hover{
-      background-size: 110%;
+      @include min-screen($break_point_min) {
+        background-size: 110%;
+      }
     }
     a{
       display: block;
-      height: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       @include min-screen($break_point_min) {
+        transition: all ease .3s;
       }
     }
   }

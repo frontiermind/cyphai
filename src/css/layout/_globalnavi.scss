@@ -36,7 +36,6 @@ global-navigation active style
     }
   }
 }
-
 .home{
   .members {
     .gnav-members {
@@ -77,11 +76,26 @@ global-navigation active style
 }
 
 .event {
-  .gnav-event {
-    > a {
-      &:after {
-        @include min-screen($break_point_min) {
-          transform: scale(1) !important;
+  .globalnav{
+    .gnav-event {
+      > a {
+        &:after {
+          @include min-screen($break_point_min) {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+.home{
+  .event {
+    .gnav-event {
+      > a {
+        &:after {
+          @include min-screen($break_point_min) {
+            transform: scale(0);
+          }
         }
       }
     }
