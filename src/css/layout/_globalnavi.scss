@@ -195,8 +195,11 @@ globalnav
       > a {
         display: block;
         position: relative;
-        padding: 30px 22px;
+        padding: 30px 21px;
         text-align: center;
+        @include min-screen($break_point_min) {
+          font-size: 15px;
+        }
         &:hover {
           &:after {
             transform: scale(1);

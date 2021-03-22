@@ -398,8 +398,8 @@ jQuery(function($){
 
     function postResize() {
       self.$lightbox.find('.lb-dataContainer').width(newWidth);
-      self.$lightbox.find('.lb-prevLink').height(newHeight);
-      self.$lightbox.find('.lb-nextLink').height(newHeight);
+      self.$lightbox.find('.lb-prevLinks').height(newHeight);
+      self.$lightbox.find('.lb-nextLinks').height(newHeight);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();

@@ -4,21 +4,14 @@
 
 <main id="main" class="l-main">
         <section class="sec-content sec-case">
-            <!-- <h2 class="common-title__center l-page__title"><span class="common-title__en">News</span><span class="arrow-icon"></span></h2> -->
+            
+    
             <section class="sec-child">
-            <h2 class="title-head">News</h2>
               <div class="l-container">
                 <div class="block-inner l-container">
-                    <div class="content-news__list">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $terms = get_the_terms( get_the_ID(), 'news_cat'); ?>
-              
-                        <dl>
-                          <dt><?php the_time('Y.m.d'); ?></dt>
-                          <dd><span class="category"><?= esc_html($terms[0]->name); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-                        </dl>
-            
-                        <?php  endwhile;  endif;?>
-                    </div>
+                  <h2 class="title-head">Achievements</h2>
+                  <?php $cat_name = 'achievements_cat'?>
+                    <?php get_template_part('module/article_list');?>
                     
                 </div>
             </div>

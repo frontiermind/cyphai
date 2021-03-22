@@ -22,12 +22,12 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<?php wp_head(); ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/script.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
     jQuery(function($){
   // ここに処理を書いていきます｡
   $('#slider').slick({ //{}を入れる
     autoplay: true, //「オプション名: 値」の形式で書く
+    arrows: true,
     });
   });
   </script>
@@ -46,7 +46,7 @@
             <ul class="l-header-subnavi">
               
               <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
-              <li class="l-header-subnavi--news"><a href="<?php echo esc_url(home_url('/')); ?>news"><i class="far fa-newspaper"></i>NEWS</a></li>
+              <!-- <li class="l-header-subnavi--news"><a href="<?php echo esc_url(home_url('/')); ?>news"><i class="far fa-newspaper"></i>NEWS</a></li> -->
               <li class="l-header-subnavi--news"><a href="<?php echo esc_url(home_url('/')); ?>contact"><i class="far fa-envelope"></i>CONTACT</a></li>
             </ul>
           </div>
@@ -72,10 +72,10 @@
                     <a class="js-gnav-child gnav-child-btn" href="<?php echo esc_url(home_url('/')); ?>about">About<span></span></a>
                   </li>
                   <li class="gnav-members"><a href="<?php echo esc_url(home_url('/')); ?>members">Members<span></span></a></li>
-                  <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>event">Event<span></span></a></li>
+                  <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>events">Events<span></span></a></li>
                   <li class="gnav-open">
                     <a class="js-gnav-child gnav-child-btn" href="<?php echo esc_url(home_url('/')); ?>open">
-                      Open position<span></span>
+                      Open positions<span></span>
                     </a>
                       <div class="globalnav-child">
                         <ul class="globalnav-child__list">
@@ -85,8 +85,8 @@
                       </div>
   
                   </li>
-              <li class="gnav-publication"><a href="<?php echo esc_url(home_url('/')); ?>publication">Publication</a></li>
-              <li class="gnav-link"><a href="<?php echo esc_url(home_url('/')); ?>link">Link</a></li>
+              <li class="gnav-publication"><a href="<?php echo esc_url(home_url('/')); ?>achievements">Achievements</a></li>
+              <li class="gnav-link"><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li>
                 </ul>
               </nav>
             </div>
@@ -97,7 +97,7 @@
               <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
               <li><a href="<?php echo esc_url(home_url('/')); ?>about">About</a></li>
               <li><a href="<?php echo esc_url(home_url('/')); ?>members">Members</a></li>
-              <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>event">Event<span></span></a></li>
+              <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>events">Events<span></span></a></li>
               <li>
                 <a class="js-chlid-btn child-btn" href="<?php echo esc_url(home_url('/')); ?>open">Open positions</a>
                 <ul class="sp-globanav-child">
@@ -105,7 +105,8 @@
                   <li><a href="<?php echo esc_url(home_url('/')); ?>open/#france">internships in France</a></li>
                 </ul>
               </li>
-              <li><a href="<?php echo esc_url(home_url('/')); ?>link">Link</a></li>
+              <li><a href="<?php echo esc_url(home_url('/')); ?>achievements"">Achievements</a></li>
+              <li><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li>
             </ul>
           </nav>
   

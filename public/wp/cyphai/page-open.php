@@ -9,7 +9,7 @@
 
 <main id="main" class="l-main">
         <section class="sec-content sec-case">
-            <h2 class="common-title__center l-page__title"><span class="common-title__en">Open positions</span><span class="arrow-icon"></span></h2>
+            <!-- <h2 class="common-title__center l-page__title"><span class="common-title__en">Open positions</span><span class="arrow-icon"></span></h2> -->
     
             <section id="japan" class="sec-child">
               <div class="l-container">
@@ -68,7 +68,7 @@
             <section class="sec-child">
               <div class="l-container">
                 <div class="block-inner">
-                  <h2 class="title-head" id="france">Open positions
+                  <h2 class="title-head" id="france">Open positionss
                     internships</h2>
                     <p><strong>M2 Internship</strong> at IRIF, Université de Paris</p>
                     <p><a href="https://www.irif.fr/~asarin/sujets/hsIA.html" target="_blank" rel="noopener noreferrer">Learning hybrid automata</a><br><br></p>

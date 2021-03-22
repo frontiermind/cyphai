@@ -55,7 +55,7 @@
     height: 4px;
     content: "";
     display: block;
-    background: linear-gradient(.25turn ,#1A75FF, #1CAEE3);
+    background: linear-gradient(.25turn ,$blue2, $blue);
     // background: $blue;
     margin: 10px auto 0;
     @include min-screen($break_point_min) {
@@ -79,7 +79,7 @@
     height: 2px;
     content: '';
     // background: $blue;
-    background: linear-gradient(.25turn ,#1A75FF, #1CAEE3);
+    background: linear-gradient(.25turn ,$blue2, $blue);
 
   }
   span {

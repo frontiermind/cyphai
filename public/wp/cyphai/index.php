@@ -54,8 +54,8 @@ get_header();
 			<h3 class="top-content-list__title">Open positions</h3>
 			<p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
 		  </div></a></li>
-		<li><a href="<?php echo esc_url(home_url('/')); ?>event"><div class="top-content-list__txt">
-		  <h3 class="top-content-list__title">Event</h3>
+		<li><a href="<?php echo esc_url(home_url('/')); ?>events"><div class="top-content-list__txt">
+		  <h3 class="top-content-list__title">Events</h3>
 		  <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
 		</div></a></li>
 	  </ul>
