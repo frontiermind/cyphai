@@ -2267,13 +2267,38 @@ html body .bx-viewport {
 
 .title-head {
   position: relative;
-  margin-bottom: 60px;
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto 25px;
+}
+
+.title-head::before {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background: linear-gradient(0.25turn, #0012AD, #0679F0);
+  width: 100%;
+}
+
+.title-head span {
+  position: relative;
+  padding: 0 1em;
+  background: #ffffff;
+}
+
+.title-head__sub {
+  position: relative;
+  margin: 30px auto;
   color: #3e3a39;
   font-size: 17.5px;
   text-align: center;
 }
 
-.title-head:after {
+.title-head__sub::after {
   width: 75px;
   height: 4px;
   content: "";
@@ -2287,6 +2312,8 @@ html body .bx-viewport {
   padding: 0 30px;
   margin: 60px auto 20px;
   text-align: left;
+  font-size: 18px;
+  font-weight: bold;
   color: #3e3a39;
 }
 
@@ -2624,6 +2651,48 @@ html body .bx-viewport {
   font-size: 20px;
 }
 
+#return_top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 990;
+}
+
+#return_top a {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  text-decoration: none;
+  background: #0012AD;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+#return_top a ::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  content: '\f077';
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#top-scroll {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+}
+
 .c-table {
   display: table;
   width: 100%;
@@ -2698,6 +2767,8 @@ html body .bx-viewport {
   background-color: #ffffff;
   font-size: 12px;
   border-top: 1px solid #ececec;
+  margin-top: 10px;
+  padding: 0;
 }
 
 .l-footer .l-container {
@@ -2804,7 +2875,7 @@ html body .bx-viewport {
   background-size: cover;
   background-position: top center;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 0;
   padding: 5px;
 }
 
@@ -2983,7 +3054,7 @@ globalnav
   left: 0;
   top: 82px;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(158, 158, 158, 0.9);
 }
 
 .globalnav .globalnav-child:hover {
@@ -2992,7 +3063,7 @@ globalnav
 
 .globalnav .globalnav-child .globalnav-child__list {
   width: 1000px;
-  margin: 10px auto 0;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -3002,7 +3073,7 @@ globalnav
 
 .globalnav .globalnav-child .globalnav-child__list > li a {
   display: block;
-  padding: 30px 25px;
+  padding: 25px;
 }
 
 .nav-anchor-point {
@@ -3162,7 +3233,7 @@ common header
 }
 
 .sec-child {
-  padding: 35px 0 45px;
+  padding: 25px 0 45px;
   position: relative;
 }
 
@@ -3171,6 +3242,10 @@ common header
 }
 
 /* ページごとのスタイル */
+
+.about .title-head span {
+  padding: 0 0.5em;
+}
 
 .about p {
   margin-bottom: 20px;
@@ -3228,19 +3303,20 @@ common header
 }
 
 .content-article__list li a .content-article__img figure img {
-  height: 280px;
+  width: 100%;
+  height: 100px;
   object-fit: cover;
   transition: all ease .3s;
 }
 
 .content-article__list li a .content-article__txt {
-  padding: 20px;
+  padding: 10px;
   background-color: #ffffff;
 }
 
 .content-article__list li a .content-article__txt .content-article__title {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .content-article__list li a .content-article__txt .txt__sub {
@@ -3278,8 +3354,9 @@ common header
 }
 
 .members .time,
-.events .time {
-  text-align: right;
+.events .time,
+.achievements .time {
+  text-align: center;
   width: 100%;
 }
 
@@ -3432,38 +3509,48 @@ page contents
   display: none;
 }
 
-.event .entry-header,
-.event .entry-footer {
+.events .entry-header,
+.events .entry-footer {
   display: none;
 }
 
-.event .title-blue {
+.events .title-head {
+  width: 90%;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.events .title-blue {
   line-height: 1;
 }
 
-.event .title-blue__sub {
+.events .title-blue__sub {
   font-size: 16px;
 }
 
-.event .meetings-list {
+.events .meetings-list {
   display: block;
   width: 600px;
   margin: 0 auto 40px;
 }
 
-.event .meetings-list li {
+.events .meetings-list li {
   list-style-type: disc;
   list-style-position: inside;
   margin-bottom: 10px;
 }
 
-.event .meetings-list li ul {
+.events .meetings-list li ul {
   margin-left: 20px;
 }
 
-.event .meetings-list li ul li {
+.events .meetings-list li ul li {
   list-style-type: circle;
   margin-bottom: 10px;
+}
+
+.single-events .title-head {
+  width: 500px !important;
 }
 
 .home .common-title__center {
@@ -3513,7 +3600,6 @@ page contents
 }
 
 .home #slider li {
-  overflow: hidden;
   position: relative;
 }
 
@@ -3743,7 +3829,7 @@ news
 
 .top-content-news,
 .top-content-contribution {
-  margin-top: 6px;
+  margin-top: 0;
   padding: 20px 10px 25px;
   background-color: #ffffff;
 }
@@ -3878,6 +3964,12 @@ contribution
   display: none;
 }
 
+.members .title-head {
+  width: 90%;
+  display: block;
+  margin: 0 auto 40px;
+}
+
 .members .title-blue {
   margin-top: 0;
 }
@@ -3908,6 +4000,10 @@ contribution
   line-height: 1;
 }
 
+.news .title-head {
+  width: 350px;
+}
+
 .news article {
   overflow-wrap: break-word;
 }
@@ -3929,8 +4025,21 @@ contribution
   padding: 0 5px;
 }
 
+.news .title {
+  font-weight: bold;
+}
+
+.news .excerpt p {
+  font-weight: normal;
+  color: #888888;
+}
+
 .open .sec-content {
   padding-bottom: 0;
+}
+
+.open .title-head span {
+  padding: 0 0.5em;
 }
 
 .open .open-title {
@@ -3951,6 +4060,21 @@ contribution
 .open .title-blue {
   line-height: 1;
   margin: 50px auto 20px;
+}
+
+.open .open-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.open .open-nav a {
+  color: #0012AD;
+  margin: 0 10px;
 }
 
 .open .open-list_o {
@@ -3974,11 +4098,6 @@ contribution
 .open p strong,
 .open p a {
   color: #0012AD;
-}
-
-.open #france {
-  padding-top: 100px;
-  margin-top: -100px;
 }
 
 /* ユーティリティ(color, size, spacing, etc.) */
@@ -4963,14 +5082,20 @@ contribution
   }
 
   .title-head {
+    margin: 0 auto 40px;
     font-size: 32px;
+    padding: 0 65px;
+    width: 500px;
+  }
+
+  .title-head__sub {
+    font-size: 24px;
     line-height: 1.7;
   }
 
-  .title-head:after {
+  .title-head__sub::after {
     width: 100px;
     height: 3px;
-    margin-top: 25px;
   }
 
   .common-title__center.l-page__title {
@@ -5187,7 +5312,7 @@ contribution
   }
 
   .l-footer {
-    padding: 35px 0 0 0;
+    padding: 0;
     font-size: 14px;
   }
 
@@ -5267,7 +5392,6 @@ contribution
   .l-footer .l-footer__copy {
     background: linear-gradient(0.2turn, #0012AD 20%, #0679F0, #0012AD);
     background-size: cover;
-    margin-top: 30px;
     padding: 5px 5px;
   }
 
@@ -5310,17 +5434,17 @@ contribution
     transform: scale(1) !important;
   }
 
-  .event .globalnav .gnav-event > a:after {
+  .events .globalnav .gnav-event > a:after {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
 
-  .home .event .gnav-event > a:after {
+  .home .events .gnav-event > a:after {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
 
-  .publication .gnav-publication > a:after {
+  .achievements .gnav-achievements > a:after {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
@@ -5343,6 +5467,10 @@ contribution
 
   .globalnav .globalnav-list > li > a {
     font-size: 15px;
+  }
+
+  .globalnav .globalnav-child .globalnav-child__list > li a {
+    color: #ffffff;
   }
 
   .nav-anchor-point {
@@ -5403,7 +5531,11 @@ contribution
   }
 
   .sec-child {
-    padding: 100px 0 60px;
+    padding: 40px 0;
+  }
+
+  .about .title-head span {
+    padding: 0 1em;
   }
 
   .about figure {
@@ -5432,6 +5564,14 @@ contribution
   .content-article__list li a .content-article__img figure img {
     width: 300px;
     height: 200px;
+  }
+
+  .content-article__list li a .content-article__txt {
+    padding: 10px;
+  }
+
+  .content-article__list li a .content-article__txt .content-article__title {
+    margin-bottom: 15px;
   }
 
   .page-header {
@@ -5504,6 +5644,10 @@ contribution
   .footer-sns_btns .sns-btns {
     width: 30%;
     margin: auto;
+  }
+
+  .events .title-head {
+    width: 350px;
   }
 
   .home #slider {
@@ -5722,6 +5866,10 @@ contribution
     width: calc(25% - 4px);
   }
 
+  .members .title-head {
+    width: 400px;
+  }
+
   .members .two-columns {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -5746,6 +5894,10 @@ contribution
 
   .news .common-title__center .arrow-icon {
     margin-bottom: 30px;
+  }
+
+  .open .title-head span {
+    padding: 0 1em;
   }
 
   .u-pc-hide {

@@ -7,7 +7,7 @@
           <!-- <div class="article-title__wrapper">
               <h3 class="title-blue article-title"><span><?php the_title(); ?></span></h3>
           </div> -->
-          <h2 class="title-head"><?php the_title(); ?></h2>
+          <h4 class="title-head__sub"><?php the_title(); ?></h4>
         
       </header>
 

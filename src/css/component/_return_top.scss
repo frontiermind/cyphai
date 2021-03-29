@@ -1,0 +1,27 @@
+#return_top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 990;
+    a{
+        position: relative;
+        display: block;
+        width: 55px;
+        height: 55px;
+        text-decoration: none;
+        background: $blue2;
+        border-radius: 50%;
+        opacity: 0.8;
+    ::before{
+        font-family: "Font Awesome 5 Free";
+        font-size: 20px;
+        content: '\f077';
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    }
+}

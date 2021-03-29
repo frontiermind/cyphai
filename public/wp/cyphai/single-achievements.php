@@ -6,9 +6,10 @@
         <section class="sec-content sec-case">
             <!-- <h2 class="common-title__center l-page__title"><span class="common-title__en">Achievements</span><span class="arrow-icon"></span></h2> -->
             <section class="sec-child">
-            <!-- <h2 class="title-head">Achievements</h2> -->
+            <!-- <h2 class="title-head"><span>Achievements</span></h2> -->
     
               <div class="l-container">
+              <h2 class="title-head"><span>Achievements</span></h2>
               <?php get_template_part('module/article');?>
             </div>
         </section>

@@ -51,13 +51,9 @@
   }
 
   #slider li{
-    overflow: hidden;
     position: relative;
     @include min-screen($break_point_min) {
       width: auto !important;
-      // padding: 0 100px;
-      // display: block;
-      // margin: 0 auto;
     }
     img{
       width: 100%;
@@ -453,7 +449,7 @@ content
 news
 =================== */
 .top-content-news {
-  margin-top: 6px;
+  margin-top: 0;
   padding: 20px 10px 25px;
   background-color: $white;
   @include min-screen($break_point_min) {

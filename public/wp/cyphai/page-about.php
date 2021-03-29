@@ -14,8 +14,8 @@
             <section class="sec-child">
               <div class="l-container">
                 <div class="block-inner">
-                  <h2 class="title-head">About the project</h2>
-                  <!-- <h3 class="title-blue"><span>About the project</span></h3> -->
+                  <h2 class="title-head"><span>About the project</span></h2>
+                  <!-- <h4 class="title-blue"><span>About the project</span></h3> -->
                   <div class="filter-content">
                         <div class="l-container">
                           <figure><img src="<?php echo get_template_directory_uri(); ?>/images/about/about_01.png" alt=""></figure><p>Artificial intelligence (AI) and data sciences are revolutionizing information systems used for control and supervision of various devices (such as sensors, robots, IoT devices) with higher levels of autonomy and adaptability in uncertain and dynamically changing environments. Among such information systems are Cyber-Physical Systems (CPS) from which emerges a new generation of AI-intensive Cyber-Physical Systems (AI-CPS). Autonomous vehicles are examples to illustrate the synergy between CPS and AI. The physical processes in such a system are typically CPS, with vehicle hybrid dynamics, low-level engine control, and a high-level control loop where AI components are present in sensors, cameras, image and scene recognition modules that influence the coordination and decision making of the system to assure their autonomy. These modules are designed by training AI components (such as neural nets) that learn how to classify road conditions and react to them. </p>

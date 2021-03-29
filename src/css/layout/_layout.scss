@@ -44,12 +44,12 @@
 
 
 .sec-child  {
-  padding: 35px 0 45px;
+  padding: 25px 0 45px;
   position: relative;
   &:nth-child(odd) {
     background-color: $white;
   }
   @include min-screen($break_point_min) {
-    padding: 100px 0 60px;
+    padding: 40px 0;
   }
 }

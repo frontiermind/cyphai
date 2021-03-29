@@ -1,4 +1,7 @@
 .news{
+  .title-head{
+    width: 350px;
+  }
   .common-title__center{
     @include min-screen($break_point_min) {
       padding: 30px 0 60px;
@@ -26,5 +29,12 @@
     color: $white !important;
     margin-right: 5px;
     padding: 0 5px
+}
+.title{
+  font-weight: bold;
+}
+.excerpt p{
+  font-weight: normal;
+  color: $gray;
 }
 }

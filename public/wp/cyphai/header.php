@@ -33,7 +33,7 @@
   </script>
 </head>
 
-<body <?php body_class();  ?>>
+<body id="body" <?php body_class();  ?>>
 <?php # wp_body_open(); 
   $page = get_post( get_the_ID() );
   $slug = $page->post_name;
@@ -74,19 +74,19 @@
                   <li class="gnav-members"><a href="<?php echo esc_url(home_url('/')); ?>members">Members<span></span></a></li>
                   <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>events">Events<span></span></a></li>
                   <li class="gnav-open">
-                    <a class="js-gnav-child gnav-child-btn" href="<?php echo esc_url(home_url('/')); ?>open">
+                    <a href="<?php echo esc_url(home_url('/')); ?>open">
                       Open positions<span></span>
                     </a>
-                      <div class="globalnav-child">
+                      <!-- <div class="globalnav-child">
                         <ul class="globalnav-child__list">
-                          <li><a href="<?php echo esc_url(home_url('/')); ?>open/#japan">internships in Japan</a></li>
-                          <li><a href="<?php echo esc_url(home_url('/')); ?>open/#france">internships in France</a></li>
+                          <li><a href="<?php echo esc_url(home_url('/')); ?>open/#japan">Open positions in Japan</a></li>
+                          <li><a href="<?php echo esc_url(home_url('/')); ?>open/#france">Open positions in France</a></li>
                         </ul>
-                      </div>
+                      </div> -->
   
                   </li>
-              <li class="gnav-publication"><a href="<?php echo esc_url(home_url('/')); ?>achievements">Achievements</a></li>
-              <li class="gnav-link"><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li>
+              <li class="gnav-achievements"><a href="<?php echo esc_url(home_url('/')); ?>achievements">Achievements</a></li>
+              <!-- <li class="gnav-link"><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li> -->
                 </ul>
               </nav>
             </div>
@@ -99,14 +99,14 @@
               <li><a href="<?php echo esc_url(home_url('/')); ?>members">Members</a></li>
               <li class="gnav-event"><a href="<?php echo esc_url(home_url('/')); ?>events">Events<span></span></a></li>
               <li>
-                <a class="js-chlid-btn child-btn" href="<?php echo esc_url(home_url('/')); ?>open">Open positions</a>
-                <ul class="sp-globanav-child">
-                  <li><a href="<?php echo esc_url(home_url('/')); ?>open/#japan">internships in Japan</a></li>
-                  <li><a href="<?php echo esc_url(home_url('/')); ?>open/#france">internships in France</a></li>
-                </ul>
+                <a href="<?php echo esc_url(home_url('/')); ?>open">Open positions</a>
+                <!-- <ul class="sp-globanav-child">
+                  <li><a href="<?php echo esc_url(home_url('/')); ?>open/#japan">Open positions in Japan</a></li>
+                  <li><a href="<?php echo esc_url(home_url('/')); ?>open/#france">Open positions in France</a></li>
+                </ul> -->
               </li>
               <li><a href="<?php echo esc_url(home_url('/')); ?>achievements"">Achievements</a></li>
-              <li><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li>
+              <!-- <li><a href="<?php echo esc_url(home_url('/')); ?>link">Links</a></li> -->
             </ul>
           </nav>
   

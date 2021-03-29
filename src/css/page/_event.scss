@@ -1,6 +1,14 @@
-.event{
+.events{
     .entry-header, .entry-footer{
         display: none;
+    }
+    .title-head{
+        width: 90%;
+        display: block;
+        margin: 0 auto 40px;
+        @media screen and (min-width: 736px){
+            width: 350px;
+        }
     }
     .title-blue{
         line-height: 1;
@@ -25,5 +33,11 @@
                 }
             }
         }
+    }
+}
+
+.single-events{
+    .title-head{
+        width: 500px !important;
     }
 }

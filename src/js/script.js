@@ -154,7 +154,20 @@ $( function() {
     }
   });
 
+  $(window).on('scroll',function() {
+    var $header = $('#return_top');
+    if ($(this).scrollTop() > 100){
+      $header.fadeIn();
 
+      // if($(this).scrollTop() > 120) {
+      //   $header.addClass("sticky");
+      // }
+
+    }
+    else{
+      $header.fadeOut();
+    }
+  });
 
 
   $('.js-gnav-child').hover(

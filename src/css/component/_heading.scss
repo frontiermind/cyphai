@@ -42,34 +42,68 @@
 
 .title-head {
   position: relative;
-  margin-bottom: 60px;
-  color: $black;
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto 25px;
+  @include min-screen($break_point_min) {
+    margin: 0 auto 40px;
+    font-size: 32px;
+    padding: 0 65px;
+    width: 500px;
+  }
+  &::before{
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background: linear-gradient(.25turn, $blue2, $blue);
+    width: 100%;
+
+  }
+  span{
+    position: relative;
+    padding: 0 1em;
+    background: $white;
+    @include min-screen($break_point_min) {
+
+    }
+  }
+}
+
+.title-head__sub{
+  position: relative;
+  margin: 30px auto;
+  color: #3e3a39;
   font-size: 17.5px;
   text-align: center;
   @include min-screen($break_point_min) {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 1.7;
   }
-  &:after {
+  &::after{
     width: 75px;
     height: 4px;
     content: "";
     display: block;
-    background: linear-gradient(.25turn ,$blue2, $blue);
-    // background: $blue;
+    background: linear-gradient(.25turn, $blue2, $blue);
     margin: 10px auto 0;
     @include min-screen($break_point_min) {
       width: 100px;
       height: 3px;
-      margin-top: 25px;
     }
   }
 }
+
 .title-blue {
   position: relative;
   padding: 0 30px;
   margin: 60px auto 20px;
   text-align: left;
+  font-size: 18px;
+  font-weight: bold;
   color: $black;
   &:after {
     position: absolute;
@@ -89,110 +123,6 @@
     background: $lightblue;
   }
 }
-// .business {
-//   .page-header {
-//     background-image: url(../images/business/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/business/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/business/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/business/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
-
-
-// .contact {
-//   .page-header {
-//     background-image: url(../images/contact/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/contact/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/contact/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/contact/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
-
-
-// .company {
-//   .page-header {
-//     background-image: url(../images/company/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/company/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/company/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/company/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
-
-
-// .privacy {
-//   .page-header {
-//     background-image: url(../images/privacy/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/privacy/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/privacy/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/privacy/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
-
-// .news {
-//   .page-header {
-//     background-image: url(../images/news/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/news/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/news/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/news/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
-
-// .results {
-//   .page-header {
-//     background-image: url(../images/results/bg_sp.jpg);
-//     @include retina {
-//       background-image: url(../images/results/bg_sp@2x.jpg);
-//     }
-
-//     @include min-screen($break_point_min) {
-//       background-image: url(../images/results/bg_pc.jpg);
-//       @include retina {
-//         background-image: url(../images/results/bg_pc@2x.jpg);
-//       }
-//     }
-
-//   }
-// }
 
 /* ====================
 各ページMV用

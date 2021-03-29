@@ -412,39 +412,39 @@ register_post_type(
 
 // Members カスタム投稿タイプ  -----------------------------------------------------------------------
 
-register_post_type(
-	'members', //投稿タイプ名
-	array(
-	  'label'=> 'Members', //ラベル名
-	  'labels' => array(
-		'menu_name' => 'Members' //管理画面のメニュー名
-	  ),
-	  'description'=> 'Members',
-	  'public' => true, //公開状態
-	  'show_ui' => true,
-	  'query_var' => true, // スラッグでURLをリクエストできる
-	  'hierarchical' => false, //固定ページのように親ページを指定するならtrue
-	  'rewrite' => array('slug' => 'members'), //スラッグ名
-	  'has_archive' => true, //パーマリンクがデフォルト以外、アーカイブページを表示する場合はtrue
-	  'supports' => array(
-		'title',
-		'editor',
-		'custom-fields',
-		'thumbnail',
-		'page-attributes',
-		'excerpt'
-	  )
-	)
-  );
-  register_taxonomy('members_cat', 'members',array(    
-	'public' => true,
-	'show_ui' => true,
-	'show_in_nav_menus' => true,
-	'show_admin_column' => true,
-	'show_ui' => true,
-	'hierarchical' => true,
-	'query_var' => true,
-	'rewrite' => true));
+// register_post_type(
+// 	'members', //投稿タイプ名
+// 	array(
+// 	  'label'=> 'Members', //ラベル名
+// 	  'labels' => array(
+// 		'menu_name' => 'Members' //管理画面のメニュー名
+// 	  ),
+// 	  'description'=> 'Members',
+// 	  'public' => true, //公開状態
+// 	  'show_ui' => true,
+// 	  'query_var' => true, // スラッグでURLをリクエストできる
+// 	  'hierarchical' => false, //固定ページのように親ページを指定するならtrue
+// 	  'rewrite' => array('slug' => 'members'), //スラッグ名
+// 	  'has_archive' => true, //パーマリンクがデフォルト以外、アーカイブページを表示する場合はtrue
+// 	  'supports' => array(
+// 		'title',
+// 		'editor',
+// 		'custom-fields',
+// 		'thumbnail',
+// 		'page-attributes',
+// 		'excerpt'
+// 	  )
+// 	)
+//   );
+//   register_taxonomy('members_cat', 'members',array(    
+// 	'public' => true,
+// 	'show_ui' => true,
+// 	'show_in_nav_menus' => true,
+// 	'show_admin_column' => true,
+// 	'show_ui' => true,
+// 	'hierarchical' => true,
+// 	'query_var' => true,
+// 	'rewrite' => true));
 
 // Events カスタム投稿タイプ  -----------------------------------------------------------------------
 
@@ -491,3 +491,9 @@ register_post_type(
 		);
 	   }
 	   add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+	   //概要（抜粋）の文字数調整
+ function my_excerpt_length($length) {
+	return 80;
+	}
+	add_filter('excerpt_length', 'my_excerpt_length');

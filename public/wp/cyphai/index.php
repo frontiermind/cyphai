@@ -34,7 +34,7 @@ get_header();
 
 <section class="sec-content top-content u-bc-lightblue">
   <!-- <h2 class="common-title__center"><span class="common-title__en">CONTENTS</span><span class="arrow-icon"></span></h2> -->
-  <h2 class="title-head">CONTENTS</h2>
+  <!-- <h2 class="title-head"><span>CONTENTS</span></h2>
   <div class="l-container">
 	<div class="l-contents__wrapper">
 	  <ul class="top-content-list">
@@ -59,7 +59,7 @@ get_header();
 		  <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
 		</div></a></li>
 	  </ul>
-	</div>
+	</div> -->
 
 	<div class="top-content-news l-contents__wrapper">
 	  <!-- <h3 class="top-content-list__title"><span>news</span></h3> -->
@@ -90,7 +90,7 @@ get_header();
 	  </div>
 	</div>
 
-	<div class="top-content-links">
+	<div class="top-content-links l-container">
 	  <ul class="content-links-list flex-col flex-col_4">
 		<li><a href="#" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_sample.png" alt="バナーエリア"></a></li>
 		<li><a href="#" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_sample.png" alt="バナーエリア"></a></li>

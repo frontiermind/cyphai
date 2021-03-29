@@ -1,4 +1,12 @@
 .about{
+    .title-head{
+        span{
+            padding: 0 0.5em;
+            @include min-screen($break_point_min){
+                padding: 0 1em;
+            }
+        }
+    }
     figure{
         @include min-screen($break_point_min){
             width: 490px;

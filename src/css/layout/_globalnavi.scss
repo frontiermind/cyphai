@@ -75,7 +75,7 @@ global-navigation active style
   }
 }
 
-.event {
+.events {
   .globalnav{
     .gnav-event {
       > a {
@@ -89,7 +89,7 @@ global-navigation active style
   }
 }
 .home{
-  .event {
+  .events {
     .gnav-event {
       > a {
         &:after {
@@ -102,8 +102,8 @@ global-navigation active style
   }
 }
 
-.publication {
-  .gnav-publication {
+.achievements {
+  .gnav-achievements {
     > a {
       &:after {
         @include min-screen($break_point_min) {
@@ -240,19 +240,23 @@ globalnav
     left: 0;
     top: 82px;
     z-index: 100;
-    background-color: rgba(255,255,255,0.9);
+    // background-color: rgba(255,255,255,0.9);
+    background-color: rgba(158,158,158,0.9);
     &:hover {
       display: block;
     }
     .globalnav-child__list {
       width: 1000px;
-      margin: 10px auto 0;
+      margin: 0 auto 0;
       text-align: center;
       > li {
         display: inline-block;
         a {
           display: block;
-          padding: 30px 25px;
+          padding: 25px;
+          @include min-screen($break_point_min) {
+            color: $white;
+          }
         }
       }
     }

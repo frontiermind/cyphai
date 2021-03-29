@@ -9,7 +9,7 @@
             <section class="sec-child">
               <div class="l-container">
                 <div class="block-inner l-container">
-                  <h2 class="title-head">Members</h2>
+                  <h2 class="title-head"><span>Members</span></h2>
                   <?php $cat_name = 'members_cat'?>
 
                     <?php get_template_part('module/article_list');?>
