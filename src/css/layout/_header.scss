@@ -42,6 +42,20 @@ common header
 }
 
   .l-header-subnavi {
+    .bogo-language-switcher{
+      display: flex;
+      li{
+        margin: 0 5px;
+        a{
+          color: $white;
+        }
+      } 
+      .en-US:after, .fr-FR:after{
+        content: '|';
+        color: $white;
+        margin-left: 10px;
+      }
+    }
     display: none;
     @include min-screen($break_point_min) {
       display: flex;

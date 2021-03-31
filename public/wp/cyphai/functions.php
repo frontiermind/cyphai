@@ -345,7 +345,7 @@ register_post_type(
 	array(
 	  'label'=> 'News', //ラベル名
 	  'labels' => array(
-		'menu_name' => 'お知らせ' //管理画面のメニュー名
+		'menu_name' => 'News' //管理画面のメニュー名
 	  ),
 	  'description'=> 'ディスクリプション',
 	  'public' => true, //公開状態
@@ -497,3 +497,18 @@ register_post_type(
 	return 80;
 	}
 	add_filter('excerpt_length', 'my_excerpt_length');
+
+	// Bogoのカスタム投稿タイプ適応化
+	add_filter('bogo_localizable_post_types', 'add_localizable_post_types', 10, 1);
+    function add_localizable_post_types($localizable) {
+        $localizable[] = 'news';
+        $localizable[] = 'events';
+        $localizable[] = 'achievements';
+        return $localizable;
+    }
+
+	// function my_localizable_post_types( $localizable ) {
+	// 	$localizable[] = '';
+	// 	return $localizable;
+	// }
+	// add_filter( 'bogo_localizable_post_types', 'my_localizable_post_types', 10, 1 );

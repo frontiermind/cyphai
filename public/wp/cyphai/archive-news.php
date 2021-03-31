@@ -19,7 +19,13 @@
             
                         <?php  endwhile;  endif;?>
                     </div>
-                    
+                    <div class="c-pagination">
+                    <?php
+                    if( function_exists('wp_pagenavi') ) {
+                      wp_pagenavi();
+                    }
+                    ?>
+                  </div>
                 </div>
             </div>
         </section>

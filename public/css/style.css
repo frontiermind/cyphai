@@ -3116,6 +3116,27 @@ common header
   display: none;
 }
 
+.l-header .l-header-subnavi .bogo-language-switcher {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-header .l-header-subnavi .bogo-language-switcher li {
+  margin: 0 5px;
+}
+
+.l-header .l-header-subnavi .bogo-language-switcher li a {
+  color: #ffffff;
+}
+
+.l-header .l-header-subnavi .bogo-language-switcher .en-US:after,
+.l-header .l-header-subnavi .bogo-language-switcher .fr-FR:after {
+  content: '|';
+  color: #ffffff;
+  margin-left: 10px;
+}
+
 .l-header .l-header-subnavi > li {
   display: table-cell;
   padding-left: 20px;

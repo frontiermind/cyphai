@@ -12,7 +12,13 @@
                   <h2 class="title-head"><span>Achievements</span></h2>
                   <?php $cat_name = 'achievements_cat'?>
                     <?php get_template_part('module/article_list');?>
-                    
+                    <div class="c-pagination">
+                    <?php
+                    if( function_exists('wp_pagenavi') ) {
+                      wp_pagenavi();
+                    }
+                    ?>
+                  </div>
                 </div>
             </div>
         </section>

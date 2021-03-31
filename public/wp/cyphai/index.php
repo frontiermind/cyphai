@@ -33,36 +33,8 @@ get_header();
 </div>
 
 <section class="sec-content top-content u-bc-lightblue">
-  <!-- <h2 class="common-title__center"><span class="common-title__en">CONTENTS</span><span class="arrow-icon"></span></h2> -->
-  <!-- <h2 class="title-head"><span>CONTENTS</span></h2>
-  <div class="l-container">
-	<div class="l-contents__wrapper">
-	  <ul class="top-content-list">
-		<li><a href="<?php echo esc_url(home_url('/')); ?>about">
-		  <div class="top-content-list__txt">
-			<h3 class="top-content-list__title">About this project</h3>
-			<p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
-		  </div>
-		</a></li>
-		<li><a href="<?php echo esc_url(home_url('/')); ?>members">
-		  <div class="top-content-list__txt">
-			<h3 class="top-content-list__title">Members</h3>
-			<p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
-		  </div></a></li>
-		<li><a href="<?php echo esc_url(home_url('/')); ?>open">
-		  <div class="top-content-list__txt">
-			<h3 class="top-content-list__title">Open positions</h3>
-			<p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
-		  </div></a></li>
-		<li><a href="<?php echo esc_url(home_url('/')); ?>events"><div class="top-content-list__txt">
-		  <h3 class="top-content-list__title">Events</h3>
-		  <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext...</p>
-		</div></a></li>
-	  </ul>
-	</div> -->
 
 	<div class="top-content-news l-contents__wrapper">
-	  <!-- <h3 class="top-content-list__title"><span>news</span></h3> -->
 	  <div class="top-title__wrapper">
 		<h2 class="title-blue"><span>News</span></h2>
 	  </div>
@@ -70,35 +42,36 @@ get_header();
 	  <?php
       $args = array(
                 'post_type' => 'news',
-                'posts_per_page' => 5
+                'posts_per_page' => 30
               );
 			  $myposts = get_posts($args);
 			  $cats = get_the_category();
     ?>
     <?php if($myposts): ?>
     <?php foreach($myposts as $post) : setup_postdata($post); $terms = get_the_terms( get_the_ID(), 'news_cat');?>
+    <?php if( $locale == get_post_meta( get_the_ID(), '_locale', true )):?>
                         <dl>
 							<?php #var_dump(get_the_term_list( get_the_id(), 'news_cat'));?>
                           <dt><?php the_time('Y.m.d'); ?></dt>
                           <dd><span class="category"><?= esc_html($terms[0]->name); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
                         </dl>
             
+                        <?php endif; ?>
                         <?php  endforeach; endif;?>
                     </div>
 	  <div class="c-btn c-btn__center">
-		<a href="./news" class="btn">More</a>
+		<a href="<?php echo $home_url; ?>news" class="btn">More</a>
 	  </div>
 	</div>
 
 	<div class="top-content-links l-container">
 	  <ul class="content-links-list flex-col flex-col_4">
-		<li><a href="#" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_sample.png" alt="バナーエリア"></a></li>
-		<li><a href="#" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_sample.png" alt="バナーエリア"></a></li>
-		<li><a href="#" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_sample.png" alt="バナーエリア"></a></li>
+		<li><a href="https://www.jst.go.jp/EN/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_jst.png" alt="JST"></a></li>
+		<li><a href="https://www.jst.go.jp/kisoken/crest/en/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_crest.png" alt="CREST"></a></li>
+		<li><a href="https://anr.fr/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_anr.png" alt="ANR"></a></li>
 	  </ul>
 	</div>
 
-  </div>
 
 
 </section>
