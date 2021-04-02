@@ -38,6 +38,8 @@
 
 .single-events{
     .title-head{
-        width: 500px !important;
+        @media screen and (min-width: 736px){
+            width: 500px !important;
+        }
     }
 }

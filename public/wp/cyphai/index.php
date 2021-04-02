@@ -36,7 +36,19 @@ get_header();
 
 	<div class="top-content-news l-contents__wrapper">
 	  <div class="top-title__wrapper">
-		<h2 class="title-blue"><span>News</span></h2>
+		<h2 class="title-blue"><span><?php 
+    switch($locale){
+      case 'ja':
+        echo 'ニュース';
+        break;
+      case 'fr_FR':
+        echo 'Actualités';
+        break;
+      default:
+        echo 'News';
+        break;
+    }
+    ?></span></h2>
 	  </div>
 	  <div class="content-news__list">
 	  <?php
@@ -60,15 +72,30 @@ get_header();
                         <?php  endforeach; endif;?>
                     </div>
 	  <div class="c-btn c-btn__center">
-		<a href="<?php echo $home_url; ?>news" class="btn">More</a>
+		<a href="<?php echo $home_url; ?>news" class="btn"><?php 
+    $top_newslist_txt = '';
+    $locale === 'ja' ? $top_newslist_txt = 'もっと見る' : $top_newslist_txt = 'More';
+    echo $top_newslist_txt;?></a>
 	  </div>
 	</div>
-
+    
 	<div class="top-content-links l-container">
 	  <ul class="content-links-list flex-col flex-col_4">
-		<li><a href="https://www.jst.go.jp/EN/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_jst.png" alt="JST"></a></li>
-		<li><a href="https://www.jst.go.jp/kisoken/crest/en/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_crest.png" alt="CREST"></a></li>
-		<li><a href="https://anr.fr/" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_anr.png" alt="ANR"></a></li>
+		<li><a href="<?php 
+    $bnr_url = '';
+    $locale === 'ja' ? $bnr_url = 'https://www.jst.go.jp/' : $bnr_url = 'https://www.jst.go.jp/EN/';
+    echo $bnr_url;
+    ?>" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_jst.png" alt="JST"></a></li>
+		<li><a href="<?php 
+    $bnr_url = '';
+    $locale === 'ja' ? $bnr_url = 'https://www.jst.go.jp/kisoken/crest/index.html' : $bnr_url = 'https://www.jst.go.jp/kisoken/crest/en/';
+    echo $bnr_url;
+    ?>" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_crest.png" alt="CREST"></a></li>
+		<li><a href="<?php 
+    $bnr_url = '';
+    $locale === 'fr_FR' ? $bnr_url = 'https://anr.fr/fr/' : $bnr_url = 'https://anr.fr/';
+    echo $bnr_url;
+    ?>" target="_blank"><img src=<?php echo get_template_directory_uri(); ?>/images/index/bnr_anr.png" alt="ANR"></a></li>
 	  </ul>
 	</div>
 

@@ -9,7 +9,19 @@
             <!-- <h2 class="title-head"><span>Achievements</span></h2> -->
     
               <div class="l-container">
-              <h2 class="title-head"><span>Achievements</span></h2>
+              <h2 class="title-head"><span><?php 
+    switch($locale){
+      case 'ja':
+        echo '研究成果';
+        break;
+      case 'fr_FR':
+        echo 'Réalisations';
+        break;
+      default:
+        echo 'Achievements';
+        break;
+    }
+    ?></span></h2>
               <?php get_template_part('module/article');?>
             </div>
         </section>

@@ -276,7 +276,11 @@ a {
 body {
   background: #f4f7f9;
   /* Fallback for when there is no custom background color defined. */
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "HiraKakuProN-W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.ja {
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 
 blockquote,
@@ -704,7 +708,7 @@ input,
 select,
 textarea {
   color: #3e3a39;
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "HiraKakuProN-W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, sans-serif;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -2329,6 +2333,7 @@ html body .bx-viewport {
 
 .title-blue span {
   position: relative;
+  display: inline-block;
   z-index: 1;
   padding: 0 1em;
   background: #f4f7f9;
@@ -3202,8 +3207,46 @@ common header
 
 .l-header .l-header-sp-navi {
   float: right;
-  display: table;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 13px;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher .bogoflags {
+  display: none;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher .bogo-language-name a {
+  width: 30px;
+  text-indent: -9999px;
+  display: block;
+  background-size: cover !important;
+  margin: 5px;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher .en .bogo-language-name a {
+  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher .fr .bogo-language-name a {
+  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
+}
+
+.l-header .l-header-sp-navi .bogo-language-switcher .ja .bogo-language-name a {
+  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
 }
 
 .l-header .l-header-sp-navi > li {
@@ -3224,12 +3267,12 @@ common header
   width: 30px;
 }
 
-.l-header .l-header-sp-navi .ja img {
-  border: #888888 1px solid;
-}
-
 .pc-nav-box {
   position: relative;
+}
+
+.ja .l-header-subnavi li {
+  font-size: 15px;
 }
 
 .l-wrapper {
@@ -3268,8 +3311,20 @@ common header
   padding: 0 0.5em;
 }
 
-.about p {
+.ja .about .sec-child p {
   margin-bottom: 20px;
+}
+
+.ja .about .sec-child li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  line-height: 2;
+}
+
+.ja .about .sec-child strong,
+.ja .about .sec-child a {
+  color: #0012AD;
 }
 
 .article-title__wrapper {
@@ -3568,10 +3623,6 @@ page contents
 .events .meetings-list li ul li {
   list-style-type: circle;
   margin-bottom: 10px;
-}
-
-.single-events .title-head {
-  width: 500px !important;
 }
 
 .home .common-title__center {
@@ -5669,6 +5720,10 @@ contribution
 
   .events .title-head {
     width: 350px;
+  }
+
+  .single-events .title-head {
+    width: 500px !important;
   }
 
   .home #slider {

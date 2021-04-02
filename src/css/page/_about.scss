@@ -14,7 +14,22 @@
             margin: 0 20px 20px 0;
         }
     }
-    p{
-        margin-bottom: 20px;
+}
+
+.ja .about{
+    .sec-child{
+        p{
+            margin-bottom: 20px;
+        }
+        li{
+            list-style-type: disc;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            line-height: 2;
+        }
+        strong,a{
+            color: $blue2;
+        }
     }
+
 }

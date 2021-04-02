@@ -19,7 +19,11 @@ li,a{
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	font-family: $font__main;
+	// font-family: $font__main;
+	font-family: $helvetica;
+	&.ja{
+	font-family: $font__jp !important;
+	}
 }
 
 blockquote, q {

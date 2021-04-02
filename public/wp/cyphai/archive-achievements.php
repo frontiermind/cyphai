@@ -9,7 +9,19 @@
             <section class="sec-child">
               <div class="l-container">
                 <div class="block-inner l-container">
-                  <h2 class="title-head"><span>Achievements</span></h2>
+                  <h2 class="title-head"><span><?php 
+    switch($locale){
+      case 'ja':
+        echo '研究成果';
+        break;
+      case 'fr_FR':
+        echo 'Réalisations';
+        break;
+      default:
+        echo 'Achievements';
+        break;
+    }
+    ?></span></h2>
                   <?php $cat_name = 'achievements_cat'?>
                     <?php get_template_part('module/article_list');?>
                     <div class="c-pagination">

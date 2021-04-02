@@ -105,6 +105,8 @@ common header
     }
   }
 
+  
+
   .l-header-bottom {
     background-color: $white;
     padding: 10px 0;
@@ -130,10 +132,35 @@ common header
 
   .l-header-sp-navi {
     float: right;
-    display: table;
+    display: flex;
     margin-top: 13px;
     @include min-screen($break_point_min) {
       display: none;
+    }
+    .bogo-language-switcher{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .bogoflags{
+        display: none;
+      }
+      .bogo-language-name a{
+        width: 30px;
+        text-indent:-9999px;
+        display: block;
+        background-size: cover !important;
+        margin: 5px;
+      }
+      .en .bogo-language-name a{
+        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
+        }
+      .fr .bogo-language-name a{
+        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
+        }
+      .ja .bogo-language-name a{
+        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
+        }
+      
     }
     > li {
       display: table-cell;
@@ -152,11 +179,7 @@ common header
         }
       }
     }
-    .ja{
-      img{
-        border: $gray 1px solid;
-      }
-    }
+    
   }
 
 }
@@ -165,3 +188,6 @@ common header
   position: relative;
 }
 
+.ja .l-header-subnavi li{
+    font-size: 15px;
+}

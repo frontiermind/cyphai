@@ -10,7 +10,19 @@
             <!-- <h2 class="title-head"><span>News</span></h2> -->
     
               <div class="l-container">
-              <h2 class="title-head"><span>News</span></h2>
+              <h2 class="title-head"><span><?php 
+    switch($locale){
+      case 'ja':
+        echo 'ニュース';
+        break;
+      case 'fr_FR':
+        echo 'Actualités';
+        break;
+      default:
+        echo 'News';
+        break;
+    }
+    ?></span></h2>
 
               <?php get_template_part('module/article');?>
 

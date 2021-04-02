@@ -493,10 +493,10 @@ register_post_type(
 	   add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
 	   //概要（抜粋）の文字数調整
- function my_excerpt_length($length) {
-	return 80;
+	function en_length($length) {
+		return 20;
 	}
-	add_filter('excerpt_length', 'my_excerpt_length');
+	add_filter('excerpt_length', 'en_length');
 
 	// Bogoのカスタム投稿タイプ適応化
 	add_filter('bogo_localizable_post_types', 'add_localizable_post_types', 10, 1);
