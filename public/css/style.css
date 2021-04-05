@@ -2772,7 +2772,6 @@ html body .bx-viewport {
   background-color: #ffffff;
   font-size: 12px;
   border-top: 1px solid #ececec;
-  margin-top: 10px;
   padding: 0;
 }
 
@@ -2880,7 +2879,7 @@ html body .bx-viewport {
   background-size: cover;
   background-position: top center;
   text-align: center;
-  margin-top: 0;
+  margin: 0;
   padding: 5px;
 }
 
@@ -4043,25 +4042,40 @@ contribution
 }
 
 .members .title-blue {
-  margin-top: 0;
+  margin: 50px auto 20px;
 }
 
-.members .two-columns {
+.members .title-head__sub {
+  margin: 50px auto 40px;
+}
+
+.members .members-list li {
+  list-style-position: inside;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #888888;
 }
 
-.members .two-columns .column li {
-  list-style-type: disc;
-  list-style-position: inside;
+.members .members-list li span {
   margin-bottom: 10px;
+}
+
+.members .members-list li span:last-child {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.members .members-list li a {
+  color: #0012AD;
 }
 
 .news-single {
@@ -4170,6 +4184,10 @@ contribution
 .open p strong,
 .open p a {
   color: #0012AD;
+}
+
+.open .l-footer .l-footer__copy {
+  margin-bottom: 0;
 }
 
 /* ユーティリティ(color, size, spacing, etc.) */
@@ -5946,14 +5964,20 @@ contribution
     width: 400px;
   }
 
-  .members .two-columns {
+  .members .members-list li {
+    margin-bottom: 10px;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 
-  .members .two-columns .column {
-    width: 45%;
+  .members .members-list li span {
+    margin-bottom: 0;
+    width: 20%;
+  }
+
+  .members .members-list li span:last-child {
+    width: 40%;
   }
 
   .news-single .common-title__center {
@@ -6070,5 +6094,15 @@ contribution
     position: fixed;
     text-align: center;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .l-header .l-header__title {
+    width: 110px;
+  }
+
+  .l-header .l-header-sp-navi {
+    margin-top: 9px;
   }
 }

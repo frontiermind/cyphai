@@ -31,15 +31,16 @@ common header
     line-height: 0;
     width: 136px;
     float: left;
+
     @include min-screen($break_point_min) {
     width: 135px;
     margin-top: 15px;
     position: relative;
   }
-  img{
-    
-  }
+  @media screen and (max-width:570px) { 
+    width: 110px;
 }
+  }
 
   .l-header-subnavi {
     .bogo-language-switcher{
@@ -137,6 +138,9 @@ common header
     @include min-screen($break_point_min) {
       display: none;
     }
+    @media screen and (max-width:570px) { 
+      margin-top: 9px;
+  }
     .bogo-language-switcher{
       display: flex;
       justify-content: center;
