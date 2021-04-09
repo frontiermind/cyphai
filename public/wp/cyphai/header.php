@@ -53,12 +53,7 @@ $locale = get_locale();
               <?php echo do_shortcode( '[bogo]' ); ?>
               <li class="l-header-subnavi--news"><a href="<?php echo $home_url; ?>contact"><i class="far fa-envelope"></i>CONTACT</a></li>
             </ul>
-            <!-- <ul class="l-header-subnavi">
-              
-              <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
-              <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-              <li class="l-header-subnavi--news"><a href="/wp/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
-            </ul> -->
+           
           </div>
         </div>
   
@@ -68,12 +63,10 @@ $locale = get_locale();
               <h1 class="l-header__title"><a href="<?php echo $home_url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/header/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/images/header/logo.png 1x,<?php echo get_template_directory_uri(); ?>/images/header/logo@2x.png 2x" alt="CyPhAI"></a></h1>
   
               <ul class="l-header-sp-navi">
-                <!-- <li class="en"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt=""></a></li>
-                <li class="ja"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""></a></li>
-                <li class="fr"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt=""></a></li> -->
+               
               <?php echo do_shortcode( '[bogo]' ); ?>
 
-                <li><a href="contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                <li><a href="<?php echo $home_url; ?>contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
                 <li id="js-menuToggle"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_menu@2x.png 2x" alt=""></li>
               </ul>
   
@@ -89,16 +82,11 @@ $locale = get_locale();
                     <a href="<?php echo $home_url; ?>open">
                       Open positions<span></span>
                     </a>
-                      <!-- <div class="globalnav-child">
-                        <ul class="globalnav-child__list">
-                          <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                          <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                        </ul>
-                      </div> -->
+                     
   
                   </li>
               <li class="gnav-achievements"><a href="<?php echo $home_url; ?>achievements">Achievements</a></li>
-              <!-- <li class="gnav-link"><a href="<?php echo $home_url; ?>link">Links</a></li> -->
+              
                 </ul>
               </nav>
             </div>
@@ -112,13 +100,9 @@ $locale = get_locale();
               <li class="gnav-event"><a href="<?php echo $home_url; ?>events">Events<span></span></a></li>
               <li>
                 <a href="<?php echo $home_url; ?>open">Open positions</a>
-                <!-- <ul class="sp-globanav-child">
-                  <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                  <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                </ul> -->
+              
               </li>
               <li><a href="<?php echo $home_url; ?>achievements">Achievements</a></li>
-              <!-- <li><a href="<?php echo $home_url; ?>link">Links</a></li> -->
             </ul>
           </nav>
   
@@ -137,12 +121,7 @@ $locale = get_locale();
                   <?php echo do_shortcode( '[bogo]' ); ?>
                   <li class="l-header-subnavi--news"><a href="<?php echo $home_url; ?>contact"><i class="far fa-envelope"></i>お問い合わせ</a></li>
                 </ul>
-                <!-- <ul class="l-header-subnavi">
-                  
-                  <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
-                  <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-                  <li class="l-header-subnavi--news"><a href="/wp/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
-                </ul> -->
+               
               </div>
             </div>
       
@@ -155,7 +134,7 @@ $locale = get_locale();
                     
                   <?php echo do_shortcode( '[bogo]' ); ?>
 
-                    <li><a href="contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                    <li><a href="<?php echo $home_url; ?>contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
                     <li id="js-menuToggle"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_menu@2x.png 2x" alt=""></li>
                   </ul>
       
@@ -171,16 +150,11 @@ $locale = get_locale();
                         <a href="<?php echo $home_url; ?>open">
                           メンバー募集<span></span>
                         </a>
-                          <!-- <div class="globalnav-child">
-                            <ul class="globalnav-child__list">
-                              <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                              <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                            </ul>
-                          </div> -->
+                       
       
                       </li>
                   <li class="gnav-achievements"><a href="<?php echo $home_url; ?>achievements">研究成果</a></li>
-                  <!-- <li class="gnav-link"><a href="<?php echo $home_url; ?>link">Links</a></li> -->
+                
                     </ul>
                   </nav>
                 </div>
@@ -194,13 +168,10 @@ $locale = get_locale();
                   <li class="gnav-event"><a href="<?php echo $home_url; ?>events">イベント<span></span></a></li>
                   <li>
                     <a href="<?php echo $home_url; ?>open">メンバー募集</a>
-                    <!-- <ul class="sp-globanav-child">
-                      <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                      <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                    </ul> -->
+                  
                   </li>
                   <li><a href="<?php echo $home_url; ?>achievements">研究成果</a></li>
-                  <!-- <li><a href="<?php echo $home_url; ?>link">Links</a></li> -->
+                  
                 </ul>
               </nav>
       
@@ -219,12 +190,7 @@ $locale = get_locale();
                   <?php echo do_shortcode( '[bogo]' ); ?>
                   <li class="l-header-subnavi--news"><a href="<?php echo $home_url; ?>contact"><i class="far fa-envelope"></i>CONTACT</a></li>
                 </ul>
-                <!-- <ul class="l-header-subnavi">
-                  
-                  <li class="l-header-subnavi--en"><a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_en_s@2x.png 2x" alt="">English</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_ja_s@2x.png 2x" alt=""> Japanese</a> | <a href="#"><img class="subnavi-icon" src="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_fr_s@2x.png 2x" alt="">	French</a></li>
-                  <li class="l-header-subnavi--news"><a href="/news"><i class="far fa-newspaper"></i>NEWS</a></li>
-                  <li class="l-header-subnavi--news"><a href="/wp/contact"><i class="far fa-envelope"></i>CONTACT</a></li>
-                </ul> -->
+             
               </div>
             </div>
       
@@ -237,7 +203,7 @@ $locale = get_locale();
                    
                   <?php echo do_shortcode( '[bogo]' ); ?>
 
-                    <li><a href="contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
+                    <li><a href="<?php echo $home_url; ?>contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_mail.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_mail@2x.png 2x" alt=""></a></li>
                     <li id="js-menuToggle"><img src="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png" srcset="<?php echo get_template_directory_uri(); ?>/images/common/icon_menu.png 1x,<?php echo get_template_directory_uri(); ?>/images/common/icon_menu@2x.png 2x" alt=""></li>
                   </ul>
       
@@ -253,16 +219,11 @@ $locale = get_locale();
                         <a href="<?php echo $home_url; ?>open">
                           Postes vacants<span></span>
                         </a>
-                          <!-- <div class="globalnav-child">
-                            <ul class="globalnav-child__list">
-                              <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                              <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                            </ul>
-                          </div> -->
+                        
       
                       </li>
                   <li class="gnav-achievements"><a href="<?php echo $home_url; ?>achievements">Réalisations</a></li>
-                  <!-- <li class="gnav-link"><a href="<?php echo $home_url; ?>link">Links</a></li> -->
+                 
                     </ul>
                   </nav>
                 </div>
@@ -276,13 +237,10 @@ $locale = get_locale();
                   <li class="gnav-event"><a href="<?php echo $home_url; ?>events">Événements<span></span></a></li>
                   <li>
                     <a href="<?php echo $home_url; ?>open">Postes vacants</a>
-                    <!-- <ul class="sp-globanav-child">
-                      <li><a href="<?php echo $home_url; ?>open/#japan">Open positions in Japan</a></li>
-                      <li><a href="<?php echo $home_url; ?>open/#france">Open positions in France</a></li>
-                    </ul> -->
+                 
                   </li>
                   <li><a href="<?php echo $home_url; ?>achievements">Réalisations</a></li>
-                  <!-- <li><a href="<?php echo $home_url; ?>link">Links</a></li> -->
+                 
                 </ul>
               </nav>
       

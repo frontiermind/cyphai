@@ -254,16 +254,11 @@ th {
 
 html {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 p {
   line-height: 2;
-  font-weight: 600;
-}
-
-li,
-a {
-  font-weight: 600;
 }
 
 *,
@@ -314,10 +309,6 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
-}
-
-.sec-content {
-  padding: 0 0 30px;
 }
 
 .block-inner {
@@ -2679,6 +2670,7 @@ html body .bx-viewport {
   font-family: "Font Awesome 5 Free";
   font-size: 20px;
   content: '\f077';
+  font-weight: 900;
   color: #ffffff;
   position: absolute;
   top: 50%;
@@ -3145,7 +3137,6 @@ common header
   display: table-cell;
   padding-left: 20px;
   font-size: 12px;
-  font-weight: bold;
   color: #ffffff;
   vertical-align: middle;
 }
@@ -3237,15 +3228,15 @@ common header
 }
 
 .l-header .l-header-sp-navi .bogo-language-switcher .en .bogo-language-name a {
-  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
+  background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
 }
 
 .l-header .l-header-sp-navi .bogo-language-switcher .fr .bogo-language-name a {
-  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
+  background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
 }
 
 .l-header .l-header-sp-navi .bogo-language-switcher .ja .bogo-language-name a {
-  background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
+  background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
 }
 
 .l-header .l-header-sp-navi > li {
@@ -3321,7 +3312,6 @@ common header
   line-height: 2;
 }
 
-.ja .about .sec-child strong,
 .ja .about .sec-child a {
   color: #0012AD;
 }
@@ -3428,7 +3418,6 @@ common header
   transform: scale(1.2);
 }
 
-.members .time,
 .events .time,
 .achievements .time {
   text-align: center;
@@ -3579,9 +3568,30 @@ page contents
   height: 30px;
 }
 
+.contact .js-header-sticky.change {
+  display: none !important;
+}
+
+.contact #return_top {
+  display: none !important;
+}
+
 .contact .entry-header,
 .contact .entry-footer {
   display: none;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+  width: 100%;
+}
+
+.events .js-header-sticky.change {
+  display: none !important;
+}
+
+.events #return_top {
+  display: none !important;
 }
 
 .events .entry-header,
@@ -3622,6 +3632,14 @@ page contents
 .events .meetings-list li ul li {
   list-style-type: circle;
   margin-bottom: 10px;
+}
+
+.home .bx-clone {
+  display: none !important;
+}
+
+.home .bx-viewport {
+  height: auto;
 }
 
 .home .common-title__center {
@@ -3670,13 +3688,17 @@ page contents
   content: url(/images/lib/arrow_left.png);
 }
 
-.home #slider li {
+.home #slider .slide {
   position: relative;
 }
 
-.home #slider li img {
+.home #slider .slide img {
   width: 100%;
   height: Auto;
+}
+
+.home .top-content-links {
+  margin-bottom: 40px;
 }
 
 .top-content-list {
@@ -4076,6 +4098,37 @@ contribution
 
 .members .members-list li a {
   color: #0012AD;
+  text-decoration: underline;
+}
+
+.members .members-list li a:hover {
+  text-decoration: none;
+}
+
+.members .members-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.members .members-nav a {
+  color: #0012AD;
+  margin: 0 10px;
+  text-decoration: underline;
+}
+
+.members .members-nav a:hover {
+  text-decoration: none;
+}
+
+.members #japan,
+.members #france {
+  margin-top: -30px;
+  padding-top: 60px;
 }
 
 .news-single {
@@ -4161,6 +4214,11 @@ contribution
 .open .open-nav a {
   color: #0012AD;
   margin: 0 10px;
+  text-decoration: underline;
+}
+
+.open .open-nav a:hover {
+  text-decoration: none;
 }
 
 .open .open-list_o {
@@ -4181,13 +4239,21 @@ contribution
   margin-bottom: 5px;
 }
 
-.open p strong,
 .open p a {
   color: #0012AD;
+  text-decoration: underline;
+}
+
+.open p a:hover {
+  text-decoration: none;
 }
 
 .open .l-footer .l-footer__copy {
   margin-bottom: 0;
+}
+
+.open .sec-child {
+  background: #ffffff;
 }
 
 /* ユーティリティ(color, size, spacing, etc.) */
@@ -4882,10 +4948,6 @@ contribution
 }
 
 @media screen and (min-width: 736px) {
-  .sec-content {
-    padding: 0 0 30px;
-  }
-
   .block-inner__left {
     width: 430px;
   }
@@ -5736,6 +5798,11 @@ contribution
     margin: auto;
   }
 
+  .contact input[type="text"],
+  .contact input[type="email"] {
+    width: auto;
+  }
+
   .events .title-head {
     width: 350px;
   }
@@ -5748,11 +5815,11 @@ contribution
     width: 1000px !important;
   }
 
-  .home #slider li {
+  .home #slider .slide {
     width: auto !important;
   }
 
-  .home #slider li img {
+  .home #slider .slide img {
     width: 1000px;
     height: 400px;
   }
@@ -5977,7 +6044,13 @@ contribution
   }
 
   .members .members-list li span:last-child {
-    width: 40%;
+    width: 50%;
+  }
+
+  .members #japan,
+  .members #france {
+    margin-top: -40px;
+    padding-top: 80px;
   }
 
   .news-single .common-title__center {

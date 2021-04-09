@@ -4,9 +4,7 @@
 
 
       <header class="article-detail_header">
-          <!-- <div class="article-title__wrapper">
-              <h3 class="title-blue article-title"><span><?php the_title(); ?></span></h3>
-          </div> -->
+          
           <h4 class="title-head__sub"><?php the_title(); ?></h4>
         
       </header>
@@ -19,7 +17,7 @@
       </section>
 
       <p class="article-detail_header__date">
-          <?php the_time('Y.m.d'); ?>
+      <?php if($locale !== 'ja'):?>Last Updated : <?php else:?>最終更新日：<?php endif;?><?= get_the_modified_date('Y.m.d'); ?>
         </p>
     <?php endwhile; ?>
       </article>

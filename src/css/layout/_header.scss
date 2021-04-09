@@ -67,7 +67,6 @@ common header
       display: table-cell;
       padding-left: 20px;
       font-size: 12px;
-      font-weight: bold;
       color:  $white;
       vertical-align: middle;
       a {
@@ -156,13 +155,13 @@ common header
         margin: 5px;
       }
       .en .bogo-language-name a{
-        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
+        background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/us.png) no-repeat;
         }
       .fr .bogo-language-name a{
-        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
+        background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/fr.png) no-repeat;
         }
       .ja .bogo-language-name a{
-        background: url(https://cyphai.dev-fmc.tokyo/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
+        background: url(http://cyphai.io/wp/wp-content/plugins/bogo/images/flag-icons/jp.png) no-repeat;
         }
       
     }

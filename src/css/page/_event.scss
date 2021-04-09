@@ -1,4 +1,10 @@
 .events{
+    .js-header-sticky.change{
+        display: none !important;
+    }
+    #return_top{
+        display: none !important;
+    }
     .entry-header, .entry-footer{
         display: none;
     }

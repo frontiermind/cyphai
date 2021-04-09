@@ -410,41 +410,6 @@ register_post_type(
 	'query_var' => true,
 	'rewrite' => true));
 
-// Members カスタム投稿タイプ  -----------------------------------------------------------------------
-
-// register_post_type(
-// 	'members', //投稿タイプ名
-// 	array(
-// 	  'label'=> 'Members', //ラベル名
-// 	  'labels' => array(
-// 		'menu_name' => 'Members' //管理画面のメニュー名
-// 	  ),
-// 	  'description'=> 'Members',
-// 	  'public' => true, //公開状態
-// 	  'show_ui' => true,
-// 	  'query_var' => true, // スラッグでURLをリクエストできる
-// 	  'hierarchical' => false, //固定ページのように親ページを指定するならtrue
-// 	  'rewrite' => array('slug' => 'members'), //スラッグ名
-// 	  'has_archive' => true, //パーマリンクがデフォルト以外、アーカイブページを表示する場合はtrue
-// 	  'supports' => array(
-// 		'title',
-// 		'editor',
-// 		'custom-fields',
-// 		'thumbnail',
-// 		'page-attributes',
-// 		'excerpt'
-// 	  )
-// 	)
-//   );
-//   register_taxonomy('members_cat', 'members',array(    
-// 	'public' => true,
-// 	'show_ui' => true,
-// 	'show_in_nav_menus' => true,
-// 	'show_admin_column' => true,
-// 	'show_ui' => true,
-// 	'hierarchical' => true,
-// 	'query_var' => true,
-// 	'rewrite' => true));
 
 // Events カスタム投稿タイプ  -----------------------------------------------------------------------
 
@@ -507,8 +472,17 @@ register_post_type(
         return $localizable;
     }
 
-	// function my_localizable_post_types( $localizable ) {
-	// 	$localizable[] = '';
-	// 	return $localizable;
-	// }
-	// add_filter( 'bogo_localizable_post_types', 'my_localizable_post_types', 10, 1 );
+	// 固定ページでpタグの自動挿入停止
+	add_filter('the_content', 'wpautop_filter', 9);
+	function wpautop_filter($content) {
+	global $post;
+	$remove_filter = false;
+	$arr_types = array('page','events'); //適用させる投稿タイプを指定
+	$post_type = get_post_type( $post->ID );
+	if (in_array($post_type, $arr_types)) $remove_filter = true;
+	if ( $remove_filter ) {
+	remove_filter('the_content', 'wpautop');
+	remove_filter('the_excerpt', 'wpautop');
+	}
+	return $content;
+	}

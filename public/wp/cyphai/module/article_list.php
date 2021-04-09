@@ -21,7 +21,10 @@ global $cat_name; $terms = get_the_terms( get_the_ID(), $cat_name);?>
                                     </p>
                                 <?php endif;?>
                                 <p  class="time">
-                                    <span><?php the_time('Y.m.d'); ?></span>
+                                    <?php
+                                    global $locale;
+                                    ?>
+                                    <span><?php if($locale !== 'ja'):?>Last Updated : <?php else:?>最終更新日：<?php endif;?><?= get_the_modified_date('Y.m.d'); ?></span>
                                 </p>
                             </div>
                         </div>

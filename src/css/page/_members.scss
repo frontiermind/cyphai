@@ -38,12 +38,38 @@
                         font-weight: normal;
                         margin-bottom: 0;
                         @media screen and (min-width: 736px){
-                            width: 40%;
+                            width: 50%;
                         }
                     }
                 }
                 a{
                     color: $blue2;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+            .members-nav{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 30px;
+                a{
+                    color: $blue2;
+                    margin: 0 10px;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            #japan, #france{
+                margin-top: -30px;
+                padding-top: 60px;
+                @media screen and (min-width: 736px){
+                    margin-top: -40px;
+                    padding-top: 80px;
                 }
             }
 }

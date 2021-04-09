@@ -35,6 +35,10 @@
         a{
             color: $blue2;
             margin: 0 10px;
+            text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
         }
     }
     .open-list_o{
@@ -52,12 +56,20 @@
         &.mb5{
             margin-bottom: 5px;
         }
-        strong,a{
+        a{
             color: $blue2;
+            text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
         }
     }
 
     .l-footer .l-footer__copy{
         margin-bottom: 0;
+    }
+
+    .sec-child{
+        background: $white;
     }
 }

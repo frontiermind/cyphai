@@ -3,6 +3,14 @@
 
 .home{
 
+  .bx-clone{
+    display: none !important;
+  }
+
+  .bx-viewport{
+    height: auto;
+  }
+
   .common-title__center {
     margin-bottom: 0;
     .common-title__en{
@@ -50,7 +58,7 @@
     }
   }
 
-  #slider li{
+  #slider .slide{
     position: relative;
     @include min-screen($break_point_min) {
       width: auto !important;
@@ -63,6 +71,10 @@
       height: 400px;
       }
     }
+}
+
+.top-content-links{
+  margin-bottom: 40px;
 }
 }
 

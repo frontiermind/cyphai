@@ -1,5 +1,20 @@
 .contact{
+    .js-header-sticky.change{
+        display: none !important;
+    }
+    #return_top{
+        display: none !important;
+    }
     .entry-header, .entry-footer{
         display: none;
     }
+
+
+        input[type ="text"], input[type ="email"]{
+            width: 100%;
+            @include min-screen($break_point_min) {
+               width: auto;
+                }
+        }
+
 }

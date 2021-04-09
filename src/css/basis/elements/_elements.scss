@@ -1,14 +1,11 @@
 html {
 	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
 }
 
 p{
 	line-height: 2;
-	font-weight: 600;
-}
-
-li,a{
-	font-weight: 600;
+	// font-weight: 600;
 }
 
 *,
@@ -19,7 +16,6 @@ li,a{
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	// font-family: $font__main;
 	font-family: $helvetica;
 	&.ja{
 	font-family: $font__jp !important;
@@ -55,9 +51,9 @@ figure {
 
 
 .sec-content {
-	padding: 0 0 30px;
+	// padding: 0 0 30px;
 	 @include min-screen($break_point_min) {
-	  padding: 0 0 30px;
+	//   padding: 0 0 30px;
 	}
 }
 
