@@ -1,0 +1,4 @@
+[15-Apr-2021 07:32:15 UTC] PHP Warning:  require_once(/var/www/html/wp/wp-content/plugins/query-monitor/wp-content/db.php): failed to open stream: Permission denied in /var/www/html/wp/wp-includes/load.php on line 533
+[15-Apr-2021 07:32:15 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/wp/wp-content/db.php' (include_path='.:/usr/share/php') in /var/www/html/wp/wp-includes/load.php on line 533
+[15-Apr-2021 07:32:15 UTC] PHP Warning:  require_once(/var/www/html/wp/wp-content/plugins/query-monitor/wp-content/db.php): failed to open stream: Permission denied in /var/www/html/wp/wp-includes/load.php on line 533
+[15-Apr-2021 07:32:15 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/wp/wp-content/db.php' (include_path='.:/usr/share/php') in /var/www/html/wp/wp-includes/load.php on line 533

@@ -83,14 +83,19 @@ $table_prefix = 'wp__cyphai';
  */
 define( 'WP_DEBUG', false );
 
+if ( WP_DEBUG ) {
+	define('WP_DEBUG_LOG', true);
+	define('WP_DEBUG_DISPLAY', false);
+	@ini_set('display_errors', 0);
+  }
+
 /* 編集が必要なのはここまでです ! WordPress でのパブリッシングをお楽しみください。 */
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
-}
+}	
+	/** Sets up WordPress vars and included files. */
+	require_once ABSPATH . 'wp-settings.php';
 
-/** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
-
-define('FS_METHOD', 'direct');
+	define('FS_METHOD', 'direct');

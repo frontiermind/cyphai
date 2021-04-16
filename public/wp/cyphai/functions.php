@@ -400,15 +400,6 @@ register_post_type(
 	  )
 	)
   );
-  register_taxonomy('achievements_cat', 'achievements',array(    
-	'public' => true,
-	'show_ui' => true,
-	'show_in_nav_menus' => true,
-	'show_admin_column' => true,
-	'show_ui' => true,
-	'hierarchical' => true,
-	'query_var' => true,
-	'rewrite' => true));
 
 
 // Events カスタム投稿タイプ  -----------------------------------------------------------------------
@@ -437,15 +428,7 @@ register_post_type(
 	  )
 	)
   );
-  register_taxonomy('events_cat', 'events',array(    
-	'public' => true,
-	'show_ui' => true,
-	'show_in_nav_menus' => true,
-	'show_admin_column' => true,
-	'show_ui' => true,
-	'hierarchical' => true,
-	'query_var' => true,
-	'rewrite' => true));
+
 
 	function my_scripts_method() {
 		wp_enqueue_script(
