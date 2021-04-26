@@ -1,5 +1,5 @@
 <ul class="content-article__list">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 global $cat_name; $terms = get_the_terms( get_the_ID(), $cat_name);?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
