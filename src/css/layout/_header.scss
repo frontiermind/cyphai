@@ -108,16 +108,20 @@ common header
   
 
   .l-header-bottom {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     background-color: $white;
     padding: 10px 0;
-    transition: 0.4s;
     border-bottom: 1px solid ;
     @include min-screen($break_point_min) {
+      top: 30px;
       padding: 0;
     }
     &.change {
       position: fixed;
-      top: -100px;
+      top: 0;
       left: 0;
       width: 100%;
       z-index: 100;
@@ -194,3 +198,4 @@ common header
 .ja .l-header-subnavi li{
     font-size: 15px;
 }
+

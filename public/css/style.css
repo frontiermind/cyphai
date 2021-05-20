@@ -3173,15 +3173,18 @@ common header
 }
 
 .l-header .l-header-bottom {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   background-color: #ffffff;
   padding: 10px 0;
-  transition: 0.4s;
   border-bottom: 1px solid;
 }
 
 .l-header .l-header-bottom.change {
   position: fixed;
-  top: -100px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -3268,6 +3271,10 @@ common header
 .l-wrapper {
   overflow: hidden;
   margin: 0 auto;
+}
+
+.l-main {
+  margin-top: 66px;
 }
 
 .l-container {
@@ -3568,14 +3575,6 @@ page contents
   height: 30px;
 }
 
-.contact .js-header-sticky.change {
-  display: none !important;
-}
-
-.contact #return_top {
-  display: none !important;
-}
-
 .contact .entry-header,
 .contact .entry-footer {
   display: none;
@@ -3584,14 +3583,6 @@ page contents
 .contact input[type="text"],
 .contact input[type="email"] {
   width: 100%;
-}
-
-.events .js-header-sticky.change {
-  display: none !important;
-}
-
-.events #return_top {
-  display: none !important;
 }
 
 .events .entry-header,
@@ -5652,6 +5643,7 @@ contribution
   }
 
   .l-header .l-header-bottom {
+    top: 30px;
     padding: 0;
   }
 
@@ -5665,6 +5657,14 @@ contribution
 
   .l-wrapper {
     min-width: 1040px;
+  }
+
+  .l-main {
+    margin-top: 84px;
+  }
+
+  .home .l-main {
+    margin-top: 70px;
   }
 
   .company .l-main {

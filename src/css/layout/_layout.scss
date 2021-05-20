@@ -8,7 +8,16 @@
 }
 
 .l-main {
-  //margin-top: 76px;
+  margin-top: 66px;
+  @include min-screen($break_point_min) {
+    margin-top: 84px;
+  }
+}
+
+.home .l-main {
+  @include min-screen($break_point_min) {
+    margin-top: 70px;
+  }
 }
 
 
